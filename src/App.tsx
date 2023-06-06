@@ -1,9 +1,14 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Button from "./components/Button/Button";
 
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <h3>Button</h3>
+      <h4>Default</h4>
+      <Button />
+    </div>
+  );
 }
 
 export default App;
