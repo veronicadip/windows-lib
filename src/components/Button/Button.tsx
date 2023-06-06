@@ -6,7 +6,7 @@ interface Props {}
 const Button: FunctionComponent<Props> = () => {
   return (
     <button className="neutral">
-      <p>Click me</p>
+      <span>Click me</span>
     </button>
   );
 };
