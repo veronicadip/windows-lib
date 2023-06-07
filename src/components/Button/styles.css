@@ -32,12 +32,17 @@
 /* ACTIVE */
 .neutral:active {
     box-shadow: inset -1px -1px 0px #FFFFFF, inset 1px 1px 0px #0A0A0A, inset -2px -2px 0px #DFDFDF, inset 2px 2px 0px #808080;
+    padding: 6px 18px !important;
 }
-
+.neutral:active div {
+    border: none !important;
+    padding: 0 !important;
+}
 /* FOCUS */
 
 .neutral:focus {
     padding: 2px 2px 3px;
+    outline: none;
 }
 
 .neutral:focus div {
