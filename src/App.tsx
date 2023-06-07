@@ -7,9 +7,9 @@ function App() {
       <h1>Windows 98 elements</h1>
       <h3>Button</h3>
       <h4>Default</h4>
-      <Button disabled={false} />
+      <Button text="Click me" disabled={false} />
       <h4>Disabled</h4>
-      <Button disabled={true} />
+      <Button text="Don't even try" disabled={true} />
     </div>
   );
 }

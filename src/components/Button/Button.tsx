@@ -3,6 +3,7 @@ import "./styles.css";
 
 interface Props {
   disabled: boolean;
+  text: string;
 }
 
 const Button: FunctionComponent<Props> = (props) => {
@@ -10,7 +11,7 @@ const Button: FunctionComponent<Props> = (props) => {
     return (
       <button className="windowsButton neutralButton">
         <div>
-          <span>Click me</span>
+          <span>{props.text}</span>
         </div>
       </button>
     );
@@ -18,7 +19,7 @@ const Button: FunctionComponent<Props> = (props) => {
     return (
       <button className="windowsButton" disabled>
         <div>
-          <span>Click me</span>
+          <span>{props.text}</span>
         </div>
       </button>
     );
