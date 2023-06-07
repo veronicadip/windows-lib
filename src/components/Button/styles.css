@@ -1,5 +1,5 @@
-/* NEUTRAL */
-.neutral {
+/* --- NEUTRAL BUTTON --- */
+.windowsButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,12 +15,12 @@
     border: none;
 }
 
-.neutral div {
+.windowsButton div {
     display: flex;
     border: none;
 }
   
-.neutral span {
+.windowsButton span {
     display: inline-block !important;
     font-family: "MS Sans Serif", sans-serif;
     width: 100%;
@@ -30,22 +30,22 @@
     text-align: center;
 }
 /* ACTIVE */
-.neutral:active {
+.neutralButton:active {
     box-shadow: inset -1px -1px 0px #FFFFFF, inset 1px 1px 0px #0A0A0A, inset -2px -2px 0px #DFDFDF, inset 2px 2px 0px #808080;
     padding: 6px 18px !important;
 }
-.neutral:active div {
+.windowsButton:active div {
     border: none !important;
     padding: 0 !important;
 }
 /* FOCUS */
 
-.neutral:focus {
+.windowsButton:focus {
     padding: 2px 2px 3px;
     outline: none;
 }
 
-.neutral:focus div {
+.windowsButton:focus div {
     border: 1px dotted #000;
     box-sizing: border-box;
     padding: 2.5px 15px;
