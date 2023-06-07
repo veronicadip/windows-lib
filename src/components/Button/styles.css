@@ -22,7 +22,7 @@
   
 .neutral span {
     display: inline-block !important;
-    font-family: "W95FA", sans-serif;
+    font-family: "MS Sans Serif", sans-serif;
     width: 100%;
     height: 100%;
     font-size: 10px;
@@ -35,16 +35,6 @@
 }
 
 /* FOCUS */
-
-/* .neutral:focus {
-    padding: 3px 3px 4px;
-}
-
-.neutral:focus div {
-    border: 1px dotted #000;
-    box-sizing: border-box;
-    padding: 1.5px 14px;
-} */
 
 .neutral:focus {
     padding: 2px 2px 3px;

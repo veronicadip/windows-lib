@@ -1,4 +1,13 @@
 @font-face {
-  font-family: "W95FA";
+  font-family: "MS Sans Serif";
   src: url("./fonts/W95FA.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MS Sans Serif Bold";
+  src: url(./fonts/MS\ Sans\ Serif\ Bold.ttf) format("truetype");
+}
+
+body {
+  font-family: "MS Sans Serif", sans-serif;
 }
