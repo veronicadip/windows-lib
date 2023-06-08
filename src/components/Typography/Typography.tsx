@@ -3,7 +3,7 @@ import "./styles.css";
 
 interface Props {
   children: React.ReactNode;
-  bold: boolean;
+  bold?: boolean;
   type: string;
 }
 
@@ -54,7 +54,7 @@ const Typography: FunctionComponent<Props> = (props) => {
       return <p className="windowsPBold">{props.children}</p>;
     }
   }
-  return <div></div>;
+  return <></>;
 };
 
 export default Typography;

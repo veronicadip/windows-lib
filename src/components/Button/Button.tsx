@@ -3,7 +3,7 @@ import "./styles.css";
 
 interface Props {
   disabled: boolean;
-  children: string;
+  children: React.ReactNode;
 }
 
 const Button: FunctionComponent<Props> = (props) => {
