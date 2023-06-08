@@ -1,6 +1,7 @@
 import "./App.css";
 import Button from "./components/Button/Button";
 import Typography from "./components/Typography/Typography";
+import Input from "./components/Input/Input";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       </Typography>
       <Typography type="h4">Default</Typography>
       <Button disabled={false}>Click me</Button>
-      <h4>Disabled</h4>
+      <Typography type="h4">Disabled</Typography>
       <Button disabled={true}>Don't even try</Button>
       <hr />
       <Typography bold={true} type="h2">
@@ -30,8 +31,11 @@ function App() {
       <Typography type="p">
         This is a `p` element <span>- with a span inside -</span>
       </Typography>
-      <Typography type="p">asda</Typography>
       <hr />
+      <Typography bold={true} type={"h2"}>
+        Inputs
+      </Typography>
+      <Input type="number"></Input>
     </div>
   );
 }

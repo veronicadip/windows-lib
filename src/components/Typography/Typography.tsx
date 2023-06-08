@@ -4,12 +4,12 @@ import "./styles.css";
 interface Props {
   children: React.ReactNode;
   bold?: boolean;
-  type: string;
+  type?: string;
 }
 
 const Typography: FunctionComponent<Props> = (props) => {
   if (!props.bold) {
-    if (props.type === "p") {
+    if (!props.type || props.type === "p") {
       return <p className="windowsP">{props.children}</p>;
     }
     if (props.type === "h1") {
