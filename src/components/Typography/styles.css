@@ -1,0 +1,58 @@
+/* HEADINGS */
+/* H1 */
+.windowsH1 {
+    font-size: 6rem;
+}
+.windowsH1Bold {
+    font-size: 4.7rem;
+    font-family: "MS Sans Serif Bold", sans-serif;
+}
+/* H2 */
+.windowsH2 {
+    font-size: 3.75rem;
+}
+.windowsH2Bold {
+    font-size: 2.95rem;
+    font-family: "MS Sans Serif Bold", sans-serif;
+}
+/* H3 */
+.windowsH3 {
+    font-size: 3rem;
+}
+.windowsH3Bold {
+    font-size: 2.36rem;
+    font-family: "MS Sans Serif Bold", sans-serif;
+}
+/* H4 */
+.windowsH4 {
+    font-size: 2.2rem;
+}
+.windowsH4Bold {
+    font-size: 1.73rem;
+    font-family: "MS Sans Serif Bold", sans-serif;
+}
+/* H5 */
+.windowsH5 {
+    font-size: 1.5rem;
+}
+.windowsH5Bold {
+    font-size: 1.18rem;
+    font-family: "MS Sans Serif Bold", sans-serif;
+}
+/* H6 */
+.windowsH6 {
+    font-size: 1.25rem;
+}
+.windowsH6Bold {
+    font-size: 0.98rem;
+    font-family: "MS Sans Serif Bold", sans-serif;
+}
+
+/* p */
+.windowsP {
+    font-size: 1rem;
+}
+
+.windowsSpan {
+    font-size: 1rem;
+}
