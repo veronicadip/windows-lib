@@ -8,7 +8,7 @@
     width: auto;
     left: 33px;
     top: 16px;
-    padding: 6px 18px;
+    padding: 12px 26px;
     background-color: #C0C0C0;
     box-shadow: inset -1px -1px 0px #0A0A0A, inset 1px 1px 0px #FFFFFF, inset -2px -2px 0px #808080, inset 2px 2px 0px #DFDFDF;
     cursor: pointer;
@@ -18,6 +18,7 @@
 .windowsButton div {
     display: flex;
     border: none;
+    padding-top: 1px;
 }
   
 .windowsButton span {
@@ -25,18 +26,18 @@
     font-family: "MS Sans Serif", sans-serif;
     width: 100%;
     height: 100%;
-    font-size: 10px;
+    font-size: 1.2rem;
     line-height: 12px;
     text-align: center;
 }
 /* ACTIVE */
 .neutralButton:active {
     box-shadow: inset -1px -1px 0px #FFFFFF, inset 1px 1px 0px #0A0A0A, inset -2px -2px 0px #DFDFDF, inset 2px 2px 0px #808080;
-    padding: 6px 18px !important;
+    padding: 12px 26px !important;
 }
 .windowsButton:active div {
     border: none !important;
-    padding: 0 !important;
+    padding: 1px 0 0 0 !important;
 }
 /* FOCUS */
 
@@ -48,5 +49,5 @@
 .windowsButton:focus div {
     border: 1px dotted #000;
     box-sizing: border-box;
-    padding: 2.5px 15px;
+    padding: 9px 23px;
 }

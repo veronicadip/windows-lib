@@ -2,7 +2,7 @@ import { FunctionComponent, ReactElement } from "react";
 import "./styles.css";
 
 interface Props {
-  children: string;
+  children: React.ReactNode;
   bold: boolean;
   type: string;
 }
@@ -11,9 +11,6 @@ const Typography: FunctionComponent<Props> = (props) => {
   if (!props.bold) {
     if (props.type === "p") {
       return <p className="windowsP">{props.children}</p>;
-    }
-    if (props.type === "span") {
-      return <span className="windowsSpan">{props.children}</span>;
     }
     if (props.type === "h1") {
       return <h1 className="windowsH1">{props.children}</h1>;
@@ -52,6 +49,9 @@ const Typography: FunctionComponent<Props> = (props) => {
     }
     if (props.type === "h6") {
       return <h6 className="windowsH6Bold">{props.children}</h6>;
+    }
+    if (props.type === "p") {
+      return <p className="windowsPBold">{props.children}</p>;
     }
   }
   return <div></div>;

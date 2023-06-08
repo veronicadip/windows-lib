@@ -50,9 +50,10 @@
 
 /* p */
 .windowsP {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
-.windowsSpan {
-    font-size: 1rem;
+.windowsPBold {
+    font-size: 0.79rem;
+    font-family: "MS Sans Serif Bold", sans-serif;
 }

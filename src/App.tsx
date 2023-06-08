@@ -43,6 +43,15 @@ function App() {
       <Typography type="h6" bold={false}>
         h6. Windows heading
       </Typography>
+      <Typography bold={false} type={"h4"}>
+        Paragraph
+      </Typography>
+      <Typography bold={false} type={"p"}>
+        This is a `p` element
+      </Typography>
+      <Typography bold={false} type={"p"}>
+        This is a `p` element <span>- with a span inside -</span>
+      </Typography>
     </div>
   );
 }
