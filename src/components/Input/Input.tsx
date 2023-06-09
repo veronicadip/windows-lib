@@ -2,33 +2,65 @@ import { FunctionComponent } from "react";
 import "./styles.css";
 
 interface Props {
-  type?: string;
+  type?: "email" | "number" | "password" | "search" | "tel" | "text" | "url";
   placeholder?: string;
+  required?: boolean;
+  disabled?: boolean;
 }
 
 const Input: FunctionComponent<Props> = (props) => {
-  if (!props.type && !props.placeholder) {
-    return <input type="text" className="windowsInput" />;
+  const { type, placeholder, required, disabled } = props;
+  if (
+    type !== "email" &&
+    type !== "number" &&
+    type !== "password" &&
+    type !== "search" &&
+    type !== "tel" &&
+    type !== "text" &&
+    type !== "url"
+  ) {
+    return <></>;
   }
-  if (!props.type) {
+  if (!type && !placeholder) {
     return (
       <input
         type="text"
-        placeholder={props.placeholder}
         className="windowsInput"
+        required={required}
+        disabled={disabled}
       />
     );
   }
-  if (props.placeholder && props.type) {
+  if (!type) {
     return (
       <input
-        type={props.type}
-        placeholder={props.placeholder}
+        type="text"
+        placeholder={placeholder}
         className="windowsInput"
+        required={required}
+        disabled={disabled}
       />
     );
   }
-  return <input type={props.type} className="windowsInput" />;
+  if (placeholder && type) {
+    return (
+      <input
+        type={type}
+        placeholder={placeholder}
+        className="windowsInput"
+        required={required}
+        disabled={disabled}
+      />
+    );
+  }
+  return (
+    <input
+      type={type}
+      className="windowsInput"
+      required={required}
+      disabled={disabled}
+    />
+  );
 };
 
 export default Input;

@@ -1,57 +1,65 @@
-import { FunctionComponent, ReactElement } from "react";
+import { FunctionComponent } from "react";
 import "./styles.css";
 
 interface Props {
   children: React.ReactNode;
   bold?: boolean;
-  type?: string;
+  type?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
+// TODO: use object destructuring for the props.
 const Typography: FunctionComponent<Props> = (props) => {
-  if (!props.bold) {
-    if (!props.type || props.type === "p") {
-      return <p className="windowsP">{props.children}</p>;
+  const { children, bold, type } = props;
+  // TODO: consider using a swtich case
+  if (!bold) {
+    if (!type || type === "p") {
+      return <p className="windowsP">{children}</p>;
     }
-    if (props.type === "h1") {
-      return <h1 className="windowsH1">{props.children}</h1>;
+    if (type === "h1") {
+      return <h1 className="windowsH1">{children}</h1>;
     }
-    if (props.type === "h2") {
-      return <h2 className="windowsH2">{props.children}</h2>;
+    if (type === "h2") {
+      return <h2 className="windowsH2">{children}</h2>;
     }
-    if (props.type === "h3") {
-      return <h3 className="windowsH3">{props.children}</h3>;
+    if (type === "h3") {
+      return <h3 className="windowsH3">{children}</h3>;
     }
-    if (props.type === "h4") {
-      return <h4 className="windowsH4">{props.children}</h4>;
+    if (type === "h4") {
+      return <h4 className="windowsH4">{children}</h4>;
     }
-    if (props.type === "h5") {
-      return <h5 className="windowsH5">{props.children}</h5>;
+    if (type === "h5") {
+      return <h5 className="windowsH5">{children}</h5>;
     }
-    if (props.type === "h6") {
-      return <h6 className="windowsH6">{props.children}</h6>;
+    if (type === "h6") {
+      return <h6 className="windowsH6">{children}</h6>;
     }
   }
-  if (props.bold) {
-    if (props.type === "h1") {
-      return <h1 className="windowsH1Bold">{props.children}</h1>;
+
+  // TODO: don't use a separate if for bold, what if I want bold AND italic?
+  // add a class for bold and conditionally use that class depending on the prop.
+  // Example:
+  // <h2 className="windowsH1 bold" />
+  if (bold) {
+    if (type === "h1") {
+      return <h1 className="windowsH1Bold">{children}</h1>;
     }
-    if (props.type === "h2") {
-      return <h2 className="windowsH2Bold">{props.children}</h2>;
+    if (type === "h2") {
+      return <h2 className="windowsH2Bold">{children}</h2>;
     }
-    if (props.type === "h3") {
-      return <h3 className="windowsH3Bold">{props.children}</h3>;
+    if (type === "h3") {
+      return <h3 className="windowsH3Bold">{children}</h3>;
     }
-    if (props.type === "h4") {
-      return <h4 className="windowsH4Bold">{props.children}</h4>;
+    if (type === "h4") {
+      return <h4 className="windowsH4Bold">{children}</h4>;
     }
-    if (props.type === "h5") {
-      return <h5 className="windowsH5Bold">{props.children}</h5>;
+    if (type === "h5") {
+      return <h5 className="windowsH5Bold">{children}</h5>;
     }
-    if (props.type === "h6") {
-      return <h6 className="windowsH6Bold">{props.children}</h6>;
+    if (type === "h6") {
+      return <h6 className="windowsH6Bold">{children}</h6>;
     }
-    if (props.type === "p") {
-      return <p className="windowsPBold">{props.children}</p>;
+    if (type === "p") {
+      return <p className="windowsPBold">{children}</p>;
     }
   }
   return <></>;
