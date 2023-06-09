@@ -6,10 +6,11 @@ interface Props {
   placeholder?: string;
   required?: boolean;
   disabled?: boolean;
+  id?: string;
 }
 
 const Input: FunctionComponent<Props> = (props) => {
-  const { type, placeholder, required, disabled } = props;
+  const { type, placeholder, required, disabled, id } = props;
   if (
     type !== "email" &&
     type !== "number" &&
@@ -28,6 +29,7 @@ const Input: FunctionComponent<Props> = (props) => {
         className="windowsInput"
         required={required}
         disabled={disabled}
+        id={id}
       />
     );
   }
@@ -39,6 +41,7 @@ const Input: FunctionComponent<Props> = (props) => {
         className="windowsInput"
         required={required}
         disabled={disabled}
+        id={id}
       />
     );
   }
@@ -50,6 +53,7 @@ const Input: FunctionComponent<Props> = (props) => {
         className="windowsInput"
         required={required}
         disabled={disabled}
+        id={id}
       />
     );
   }
@@ -59,6 +63,7 @@ const Input: FunctionComponent<Props> = (props) => {
       className="windowsInput"
       required={required}
       disabled={disabled}
+      id={id}
     />
   );
 };
