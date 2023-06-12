@@ -13,7 +13,7 @@
     box-shadow: inset -1px -1px 0px #0A0A0A, inset 1px 1px 0px #FFFFFF, inset -2px -2px 0px #808080, inset 2px 2px 0px #DFDFDF;
     cursor: pointer;
     border: none;
-}
+} 
 
 .windowsButton div {
     display: flex;

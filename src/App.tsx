@@ -2,6 +2,7 @@ import "./App.css";
 import Button from "./components/Button/Button";
 import Typography from "./components/Typography/Typography";
 import Input from "./components/Input/Input";
+import Tabs from "./components/Tabs/Tabs";
 
 function App() {
   return (
@@ -52,6 +53,10 @@ function App() {
       <Input type="tel" placeholder="I'm a tel input"></Input>
       <Typography type="h4">Url</Typography>
       <Input type="url" placeholder="I'm a url input"></Input>
+      <Typography bold={true} type="h2">
+        Tabs
+      </Typography>
+      <Tabs></Tabs>
     </div>
   );
 }
