@@ -60,7 +60,11 @@ function App() {
       </Typography>
       <Tabs>
         <Tab value={1}>Tab1</Tab>
+        <Tab value={2}>Tab2</Tab>
+        <Tab value={3}>Tab 3</Tab>
         <TabPanel value={1}>Panel 1</TabPanel>
+        <TabPanel value={2}>Panel 2</TabPanel>
+        <TabPanel value={3}>Panel 3</TabPanel>
       </Tabs>
     </div>
   );

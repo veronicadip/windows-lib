@@ -4,19 +4,19 @@ import "./styles.css";
 interface Props {
   children: ReactNode;
   value: number;
-  eventHandler?: Function;
+  onSelect?: Function;
   selectedTab?: number;
 }
 
 const Tab: FunctionComponent<Props> = (props) => {
-  const { children, value, eventHandler, selectedTab } = props;
+  const { children, value, onSelect, selectedTab } = props;
 
-  if (!eventHandler) {
+  if (!onSelect) {
     throw new Error("missing event handler");
   }
 
   return (
-    <div className="windowsTab" onClick={eventHandler(value)}>
+    <div className="windowsTab" onClick={() => onSelect(value)}>
       <span>{children}</span>
     </div>
   );

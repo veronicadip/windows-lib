@@ -3,6 +3,7 @@ import {
   Children,
   PropsWithChildren,
   isValidElement,
+  useState,
 } from "react";
 import "./styles.css";
 
@@ -11,33 +12,27 @@ interface Props extends PropsWithChildren {
 }
 
 const Tabs: FunctionComponent<Props> = (props) => {
-  let { children, selectedTab } = props;
-  if (!selectedTab) {
-    selectedTab = 1;
-  }
+  const { children, selectedTab = 1 } = props;
+  const [currentTab, setCurrentTab] = useState(selectedTab);
+
   const selectTab = function (value: number) {
-    selectedTab = value;
+    setCurrentTab(value);
   };
   let childrenNumber = Children.count(children);
-  Children.map(children, (child) => {
+  const mappedChildren = Children.map(children, (child) => {
     if (isValidElement(child)) {
       return (
         <child.type
           {...child.props}
-          eventHandler={selectTab}
-          selectedTab={selectedTab}
+          onSelect={selectTab}
+          selectedTab={currentTab}
         />
       );
     }
     return child;
   });
 
-  return (
-    <div>
-      <div className="windowsTabsList"></div>
-      <div className="windowsTabsBody"></div>
-    </div>
-  );
+  return <div className="windowsTabs">{mappedChildren}</div>;
 };
 
 export default Tabs;
