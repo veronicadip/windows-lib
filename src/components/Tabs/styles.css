@@ -1,4 +1,4 @@
-.tabsBody {
+.windowsTabsBody {
     background-color: #C0C0C0;
     width: 343px;
     height: 172px;
@@ -8,3 +8,9 @@
     padding: 24px;
     box-shadow: inset -2px -2px 0px #0A0A0A, inset 2px 2px 0px #FFFFFF, inset -3px -3px 0px #808080, inset 3px 3px 0px #DFDFDF;
 }
+
+/* .windowsTab {
+    padding: 6px;
+    background-color: #C0C0C0;
+    box-shadow: inset -2px -2px 0px #0A0A0A, inset 2px 2px 0px #FFFFFF, inset -3px -3px 0px #808080, inset 3px 3px 0px #DFDFDF;
+} */

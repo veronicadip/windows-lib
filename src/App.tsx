@@ -3,6 +3,8 @@ import Button from "./components/Button/Button";
 import Typography from "./components/Typography/Typography";
 import Input from "./components/Input/Input";
 import Tabs from "./components/Tabs/Tabs";
+import Tab from "./components/Tab/Tab";
+import TabPanel from "./components/TabPanel/TabPanel";
 
 function App() {
   return (
@@ -56,7 +58,10 @@ function App() {
       <Typography bold={true} type="h2">
         Tabs
       </Typography>
-      <Tabs></Tabs>
+      <Tabs>
+        <Tab value={1}>Tab1</Tab>
+        <TabPanel value={1}>Panel 1</TabPanel>
+      </Tabs>
     </div>
   );
 }
