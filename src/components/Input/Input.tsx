@@ -18,7 +18,8 @@ const Input: FunctionComponent<Props> = (props) => {
     type !== "search" &&
     type !== "tel" &&
     type !== "text" &&
-    type !== "url"
+    type !== "url" &&
+    type !== undefined
   ) {
     return <></>;
   }
