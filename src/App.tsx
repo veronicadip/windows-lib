@@ -6,6 +6,8 @@ import Tabs from "./components/Tabs/Tabs";
 import TabList from "./components/TabList/TabList";
 import Tab from "./components/Tab/Tab";
 import TabPanel from "./components/TabPanel/TabPanel";
+import SmileIcon from "./components/Icons/utopia_smiley.png";
+import Icon from "./components/Icons/ac_plug-0.png";
 
 function App() {
   return (
@@ -77,11 +79,13 @@ function App() {
         <TabPanel value={2}>
           {
             <a href="https://github.com/veronicadip" target={"_blank"}>
-              Follow me on github {":)"}
+              Follow me on github
             </a>
           }
+          {<img src={SmileIcon} alt="smiley icon" />}
         </TabPanel>
       </Tabs>
+      <img src={Icon} alt="" />
     </div>
   );
 }
