@@ -15,6 +15,13 @@ const Tab: FunctionComponent<Props> = (props) => {
     throw new Error("missing event handler");
   }
 
+  if (value === selectedTab) {
+    return (
+      <div className="windowsTab selectedTab" onClick={() => onSelect(value)}>
+        <span>{children}</span>
+      </div>
+    );
+  }
   return (
     <div className="windowsTab" onClick={() => onSelect(value)}>
       <span>{children}</span>

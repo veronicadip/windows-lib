@@ -4,12 +4,11 @@ import "./styles.css";
 interface Props {
   value: number;
   children: ReactNode;
-  onSelect?: Function;
   selectedTab?: number;
 }
 
 const TabPanel: FunctionComponent<Props> = (props) => {
-  const { value, children, onSelect, selectedTab } = props;
+  const { value, children, selectedTab } = props;
   if (value === selectedTab) {
     return <div className="windowsTabsBody">{children}</div>;
   }

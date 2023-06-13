@@ -18,7 +18,6 @@ const Tabs: FunctionComponent<Props> = (props) => {
   const selectTab = function (value: number) {
     setCurrentTab(value);
   };
-  let childrenNumber = Children.count(children);
   const mappedChildren = Children.map(children, (child) => {
     if (isValidElement(child)) {
       return (

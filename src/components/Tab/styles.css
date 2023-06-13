@@ -1,5 +1,13 @@
 .windowsTab {
-    padding: 6px;
+    padding: 10px;
     background-color: #C0C0C0;
-    box-shadow: inset -2px -2px 0px #0A0A0A, inset 2px 2px 0px #FFFFFF, inset -3px -3px 0px #808080, inset 3px 3px 0px #DFDFDF;
-} 
+    box-shadow: inset -2px 0px 0px #0A0A0A, inset 2px 2px 0px #FFFFFF, inset -4px 0px 0px #808080, inset 4px 4px 0px #DFDFDF;
+    position: relative;
+    top: 4px;
+}
+.windowsTab.selectedTab {
+    z-index: 2;
+}
+
+
+/* box-shadow: inset -2px -2px 0px #0A0A0A, inset 2px 2px 0px #FFFFFF, inset -4px -4px 0px #808080, inset 4px 4px 0px #DFDFDF; */

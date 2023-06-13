@@ -3,6 +3,7 @@ import Button from "./components/Button/Button";
 import Typography from "./components/Typography/Typography";
 import Input from "./components/Input/Input";
 import Tabs from "./components/Tabs/Tabs";
+import TabList from "./components/TabList/TabList";
 import Tab from "./components/Tab/Tab";
 import TabPanel from "./components/TabPanel/TabPanel";
 
@@ -59,12 +60,27 @@ function App() {
         Tabs
       </Typography>
       <Tabs>
-        <Tab value={1}>Tab1</Tab>
-        <Tab value={2}>Tab2</Tab>
-        <Tab value={3}>Tab 3</Tab>
-        <TabPanel value={1}>Panel 1</TabPanel>
-        <TabPanel value={2}>Panel 2</TabPanel>
-        <TabPanel value={3}>Panel 3</TabPanel>
+        <TabList>
+          <Tab value={1}>Lorem</Tab>
+          <Tab value={2}>GitHub</Tab>
+        </TabList>
+        <TabPanel value={1}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          ipsum, doloremque esse a quasi consequuntur sunt dolorum officiis
+          blanditiis fugiat optio, explicabo eveniet architecto, commodi
+          perferendis suscipit cum iure quae. Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Reprehenderit voluptatem asperiores
+          consectetur possimus? Libero molestias sint facilis eos nisi ad
+          delectus quia consequuntur rerum! Voluptatibus placeat vitae
+          distinctio incidunt cum.
+        </TabPanel>
+        <TabPanel value={2}>
+          {
+            <a href="https://github.com/veronicadip" target={"_blank"}>
+              Follow me on github {":)"}
+            </a>
+          }
+        </TabPanel>
       </Tabs>
     </div>
   );
