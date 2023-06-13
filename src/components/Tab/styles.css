@@ -4,6 +4,7 @@
     box-shadow: inset -2px 0px 0px #0A0A0A, inset 2px 2px 0px #FFFFFF, inset -4px 0px 0px #808080, inset 4px 4px 0px #DFDFDF;
     position: relative;
     top: 4px;
+    cursor: pointer;
 }
 .windowsTab.selectedTab {
     z-index: 2;

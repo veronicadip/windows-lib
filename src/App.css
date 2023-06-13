@@ -12,3 +12,7 @@ body {
   font-size: 1.2rem;
   font-family: "MS Sans Serif", sans-serif;
 }
+
+a {
+  color: #222222;
+}
