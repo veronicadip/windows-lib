@@ -1,0 +1,11 @@
+.windowsTreeList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 3px;
+    width: 122px;
+    min-height: 122px;
+    background-color: #FFFFFF;
+    box-shadow: inset -1px -1px 0px #FFFFFF, inset 1px 1px 0px #0A0A0A, inset -3px -3px 0px #DFDFDF, inset 3px 3px 0px #808080;
+}

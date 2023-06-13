@@ -7,7 +7,8 @@ import TabList from "./components/TabList/TabList";
 import Tab from "./components/Tab/Tab";
 import TabPanel from "./components/TabPanel/TabPanel";
 import SmileIcon from "./components/Icons/utopia_smiley.png";
-import Icon from "./components/Icons/ac_plug-0.png";
+import TreeList from "./components/TreeList/TreeList";
+import ComputerIcon from "./components/Icons/computer_explorer_cool-4.png";
 
 function App() {
   return (
@@ -85,7 +86,9 @@ function App() {
           {<img src={SmileIcon} alt="smiley icon" />}
         </TabPanel>
       </Tabs>
-      <img src={Icon} alt="" />
+      <TreeList>
+        <img src={ComputerIcon} alt="computer icon" />
+      </TreeList>
     </div>
   );
 }
