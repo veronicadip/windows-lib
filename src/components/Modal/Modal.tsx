@@ -1,10 +1,15 @@
-import { FunctionComponent, ReactNode, useState } from "react";
+import {
+  FunctionComponent,
+  PropsWithChildren,
+  ReactNode,
+  useState,
+} from "react";
 import "./styles.css";
 import Button from "../Button/Button";
+import TitleBar from "../TitleBar/TitleBar";
 
-interface Props {
+interface Props extends PropsWithChildren {
   open?: boolean;
-  children: ReactNode;
   title?: ReactNode;
   icon?: ReactNode;
 }
@@ -29,20 +34,11 @@ const Modal: FunctionComponent<Props> = ({ open, children, title, icon }) => {
           onClick={() => setClosed()}
         ></div>
         <div className="windowsModal">
-          <div className="windowsModalBar">
-            <span className="modalBarTitle">
-              <div className="modalBarIcon">{icon}</div>
-              {title}
-            </span>
-            <div>
-              <button className="modalBarButtons modalMinimize"></button>
-              <button className="modalBarButtons modalExpand"></button>
-              <button
-                className="modalBarButtons modalClose"
-                onClick={() => setClosed()}
-              ></button>
-            </div>
-          </div>
+          <TitleBar
+            icon={icon}
+            title={title}
+            onClose={() => setClosed()}
+          ></TitleBar>
           <div className="windowsModalContent">{children}</div>
         </div>
       </>

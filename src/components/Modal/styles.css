@@ -11,56 +11,6 @@
   box-shadow: inset -2px -2px 0px #0a0a0a, inset 2px 2px 0px #dfdfdf,
     inset -3px -3px 0px #808080, inset 3px 3px 0px #ffffff;
 }
-.windowsModalBar {
-  width: 100%;
-  height: 38px;
-  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.modalBarIcon {
-  display: inline-block;
-  margin-right: 10px;
-}
-.modalBarTitle {
-  display: flex;
-  align-items: center;
-  font-family: "MS Sans Serif Bold", sans-serif;
-  margin-left: 6px;
-  color: white;
-}
-.modalBarButtons {
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 26px;
-  background-color: #c0c0c0;
-  box-shadow: inset -2px -2px 0px #0a0a0a, inset 2px 2px 0px #ffffff,
-    inset -4px -4px 0px #808080, inset 4px 4px 0px #dfdfdf;
-  cursor: pointer;
-  border: none;
-}
-.modalBarButtons:active {
-  box-shadow: inset -2px -2px 0px #ffffff, inset 2px 2px 0px #0a0a0a,
-    inset -4px -4px 0px #dfdfdf, inset 4px 4px 0px #808080;
-}
-
-.modalClose {
-  margin: 0 4px;
-  background-size: 16px;
-  background-position: top 5px left 7px;
-  background-image: url("../../assets/exit.svg");
-}
-.modalExpand {
-  background-size: 16px;
-  background-position: top 4px left 6px;
-  background-image: url("../../assets/expand.svg");
-}
-.modalMinimize {
-  background-size: 12px;
-  background-position: top 16px left 7px;
-  background-image: url("../../assets/minimize.svg");
-}
 .windowsModalContent {
   display: flex;
   flex-direction: column;

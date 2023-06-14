@@ -12,6 +12,7 @@ import TreeItem from "./components/TreeItem/TreeItem";
 import ComputerIcon from "./components/Icons/computer_explorer_cool-4.png";
 import Modal from "./components/Modal/Modal";
 import FolderIcon from "./components/Icons/directory_open_cool-2.png";
+import TitleBar from "./components/TitleBar/TitleBar";
 
 function App() {
   return (
@@ -115,6 +116,10 @@ function App() {
           accusamus
         </Modal>
       </div>
+      <TitleBar
+        title="Hello world!"
+        icon={<img src={FolderIcon} alt="computer icon" />}
+      ></TitleBar>
     </div>
   );
 }
