@@ -1,16 +1,18 @@
-import { FunctionComponent, ReactNode } from "react";
+import { FunctionComponent, PropsWithChildren, ReactNode } from "react";
 import "./styles.css";
 
-interface Props {
-  children: ReactNode;
+interface Props extends PropsWithChildren {
   value: number;
   onSelect?: Function;
   selectedTab?: number;
 }
 
-const Tab: FunctionComponent<Props> = (props) => {
-  const { children, value, onSelect, selectedTab } = props;
-
+const Tab: FunctionComponent<Props> = ({
+  children,
+  value,
+  onSelect,
+  selectedTab,
+}) => {
   if (!onSelect) {
     throw new Error("missing event handler");
   }

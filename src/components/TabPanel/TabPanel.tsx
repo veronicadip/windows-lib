@@ -1,14 +1,16 @@
-import { FunctionComponent, ReactNode } from "react";
+import { FunctionComponent, PropsWithChildren, ReactNode } from "react";
 import "./styles.css";
 
-interface Props {
+interface Props extends PropsWithChildren {
   value: number;
-  children: ReactNode;
   selectedTab?: number;
 }
 
-const TabPanel: FunctionComponent<Props> = (props) => {
-  const { value, children, selectedTab } = props;
+const TabPanel: FunctionComponent<Props> = ({
+  value,
+  children,
+  selectedTab,
+}) => {
   if (value === selectedTab) {
     return <div className="windowsTabsBody">{children}</div>;
   }

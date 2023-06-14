@@ -5,15 +5,17 @@ import {
   isValidElement,
 } from "react";
 import "./styles.css";
-import Tab from "../Tab/Tab";
 
 interface Props extends PropsWithChildren {
   onSelect?: Function;
   selectedTab?: number;
 }
 
-const TabList: FunctionComponent<Props> = (props) => {
-  const { children, onSelect, selectedTab } = props;
+const TabList: FunctionComponent<Props> = ({
+  children,
+  onSelect,
+  selectedTab,
+}) => {
   const mappedTabs = Children.map(children, (child) => {
     if (isValidElement(child)) {
       return (

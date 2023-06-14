@@ -1,16 +1,18 @@
-import { EventHandler, FunctionComponent } from "react";
+import { FunctionComponent, PropsWithChildren } from "react";
 import "./styles.css";
 
-interface Props {
+interface Props extends PropsWithChildren {
   disabled?: boolean;
-  children: React.ReactNode;
   id?: string;
-  customFunction?: () => void | Function;
   clickEventHandler?: () => void | Function;
 }
 
-const Button: FunctionComponent<Props> = (props) => {
-  const { disabled, children, id, customFunction, clickEventHandler } = props;
+const Button: FunctionComponent<Props> = ({
+  disabled,
+  children,
+  id,
+  clickEventHandler,
+}) => {
   return (
     <button
       className={`windowsButton ${disabled ? ` ` : `neutralButton`}`}

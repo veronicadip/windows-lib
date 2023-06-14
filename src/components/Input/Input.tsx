@@ -9,8 +9,13 @@ interface Props {
   id?: string;
 }
 
-const Input: FunctionComponent<Props> = (props) => {
-  const { type, placeholder, required, disabled, id } = props;
+const Input: FunctionComponent<Props> = ({
+  type,
+  placeholder,
+  required,
+  disabled,
+  id,
+}) => {
   if (
     type !== "email" &&
     type !== "number" &&

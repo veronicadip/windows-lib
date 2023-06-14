@@ -1,15 +1,12 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, PropsWithChildren } from "react";
 import "./styles.css";
 
-interface Props {
-  children: React.ReactNode;
+interface Props extends PropsWithChildren {
   bold?: boolean;
   type?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
-// TODO: use object destructuring for the props.
-const Typography: FunctionComponent<Props> = (props) => {
-  const { children, bold, type } = props;
+const Typography: FunctionComponent<Props> = ({ children, bold, type }) => {
   // TODO: consider using a swtich case
   if (!bold) {
     if (!type || type === "p") {

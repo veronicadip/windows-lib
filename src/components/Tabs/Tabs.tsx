@@ -11,8 +11,7 @@ interface Props extends PropsWithChildren {
   selectedTab?: number;
 }
 
-const Tabs: FunctionComponent<Props> = (props) => {
-  const { children, selectedTab = 1 } = props;
+const Tabs: FunctionComponent<Props> = ({ children, selectedTab = 1 }) => {
   const [currentTab, setCurrentTab] = useState(selectedTab);
 
   const selectTab = function (value: number) {
