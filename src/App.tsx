@@ -104,13 +104,11 @@ function App() {
       </TreeList>
 
       <div>
-        <Modal
-          onClose={() => {
-            console.log("asdf");
-          }}
-          open
-        >
-          modal content
+        <Modal open>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          adipisci tempore maxime ut expedita alias, eligendi consectetur
+          accusamus harum quas placeat accusantium, perferendis nobis totam
+          voluptatibus vel nesciunt eius aliquid?
         </Modal>
       </div>
     </div>
