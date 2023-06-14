@@ -19,7 +19,13 @@
   justify-content: space-between;
   align-items: center;
 }
+.modalBarIcon {
+  display: inline-block;
+  margin-right: 10px;
+}
 .modalBarTitle {
+  display: flex;
+  align-items: center;
   font-family: "MS Sans Serif Bold", sans-serif;
   margin-left: 6px;
   color: white;

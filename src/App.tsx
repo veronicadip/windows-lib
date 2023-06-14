@@ -11,6 +11,7 @@ import TreeList from "./components/TreeList/TreeList";
 import TreeItem from "./components/TreeItem/TreeItem";
 import ComputerIcon from "./components/Icons/computer_explorer_cool-4.png";
 import Modal from "./components/Modal/Modal";
+import FolderIcon from "./components/Icons/directory_open_cool-2.png";
 
 function App() {
   return (
@@ -104,7 +105,11 @@ function App() {
       </TreeList>
 
       <div>
-        <Modal open title="Hello world!">
+        <Modal
+          open
+          title="Hello world!"
+          icon={<img src={FolderIcon} alt="computer icon" />}
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
           adipisci tempore maxime ut expedita alias, eligendi consectetur
           accusamus
