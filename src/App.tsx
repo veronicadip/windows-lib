@@ -107,8 +107,7 @@ function App() {
         <Modal open>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
           adipisci tempore maxime ut expedita alias, eligendi consectetur
-          accusamus harum quas placeat accusantium, perferendis nobis totam
-          voluptatibus vel nesciunt eius aliquid?
+          accusamus
         </Modal>
       </div>
     </div>

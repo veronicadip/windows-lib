@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 interface Props {
   open?: boolean;
   children: ReactNode;
+  title?: ReactNode;
 }
 
 const Modal: FunctionComponent<Props> = ({ open, children }) => {
@@ -26,7 +27,10 @@ const Modal: FunctionComponent<Props> = ({ open, children }) => {
           className="windowsModal--overlay"
           onClick={() => setClosed()}
         ></div>
-        <div className="windowsModal">{children}</div>
+        <div className="windowsModal">
+          <div className="windowsModalBar"></div>
+          <div className="windowsModalContent">{children}</div>
+        </div>
       </>
       <Button clickEventHandler={() => setOpen()}>Open Modal</Button>
     </>
