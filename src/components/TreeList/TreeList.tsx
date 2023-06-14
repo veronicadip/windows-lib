@@ -1,12 +1,9 @@
-import { FunctionComponent, ReactNode } from "react";
+import { FunctionComponent, PropsWithChildren, ReactNode } from "react";
 import "./styles.css";
 
-interface Props {
-  children: ReactNode;
-}
+interface Props extends PropsWithChildren {}
 
-const TreeList: FunctionComponent<Props> = (props) => {
-  const { children } = props;
+const TreeList: FunctionComponent<Props> = ({ children }) => {
   return <div className="windowsTreeList">{children}</div>;
 };
 

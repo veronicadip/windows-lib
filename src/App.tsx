@@ -8,7 +8,9 @@ import Tab from "./components/Tab/Tab";
 import TabPanel from "./components/TabPanel/TabPanel";
 import SmileIcon from "./components/Icons/utopia_smiley.png";
 import TreeList from "./components/TreeList/TreeList";
+import TreeItem from "./components/TreeItem/TreeItem";
 import ComputerIcon from "./components/Icons/computer_explorer_cool-4.png";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   return (
@@ -78,17 +80,39 @@ function App() {
           distinctio incidunt cum.
         </TabPanel>
         <TabPanel value={2}>
-          {
-            <a href="https://github.com/veronicadip" target={"_blank"}>
-              Follow me on github
-            </a>
-          }
-          {<img src={SmileIcon} alt="smiley icon" />}
+          <a href="https://github.com/veronicadip" target={"_blank"}>
+            Follow me on github
+          </a>
+          <img src={SmileIcon} alt="smiley icon" />
         </TabPanel>
       </Tabs>
       <TreeList>
-        <img src={ComputerIcon} alt="computer icon" />
+        <TreeItem
+          label={
+            <>
+              <img src={ComputerIcon} alt="computer icon" />
+              Computer
+            </>
+          }
+        >
+          <TreeItem label="Nested">
+            <TreeItem label="Nested II"></TreeItem>
+            <TreeItem label="Nested II"></TreeItem>
+            <TreeItem label="Nested II"></TreeItem>
+          </TreeItem>
+        </TreeItem>
       </TreeList>
+
+      <div>
+        <Modal
+          onClose={() => {
+            console.log("asdf");
+          }}
+          open
+        >
+          modal content
+        </Modal>
+      </div>
     </div>
   );
 }

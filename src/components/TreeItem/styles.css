@@ -1,0 +1,51 @@
+:root {
+  --windowsTreeItemPadding: 20px;
+  /* TODO: change name */
+  --spacing: 20px;
+  --windowsTreeItemWidth: 2px;
+}
+
+.windowsTreeItem .windowsTreeItem {
+  padding-left: var(--windowsTreeItemPadding);
+}
+
+.windowsTreeItem .windowsTreeItem {
+  border-left: 2px solid #808080;
+}
+
+.windowsTreeItem .windowsTreeItem:last-child {
+  border-color: transparent;
+}
+
+.windowsTreeItem .windowsTreeItem::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(var(--spacing) / -2);
+  left: -2px;
+  width: calc(var(--spacing));
+  height: calc(var(--spacing) + 1px);
+  border: solid #808080;
+  border-width: 0 0 2px 2px;
+}
+
+.windowsTreeItem {
+  position: relative;
+  background-color: white;
+}
+
+.windowsTreeItem--label {
+  background-color: white;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  margin-left: -5px;
+}
+
+.windowsTreeItem--children {
+  display: none;
+}
+
+.windowsTreeItem--children__open {
+  display: inline;
+}
