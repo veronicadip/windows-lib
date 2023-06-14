@@ -28,7 +28,11 @@ const Modal: FunctionComponent<Props> = ({ open, children }) => {
           onClick={() => setClosed()}
         ></div>
         <div className="windowsModal">
-          <div className="windowsModalBar"></div>
+          <div className="windowsModalBar">
+            <button className="modalBarButtons modalMinimize"></button>
+            <button className="modalBarButtons modalExpand"></button>
+            <button className="modalBarButtons modalClose"></button>
+          </div>
           <div className="windowsModalContent">{children}</div>
         </div>
       </>
