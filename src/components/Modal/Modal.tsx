@@ -8,7 +8,7 @@ interface Props {
   title?: ReactNode;
 }
 
-const Modal: FunctionComponent<Props> = ({ open, children }) => {
+const Modal: FunctionComponent<Props> = ({ open, children, title }) => {
   const [isOpen, setIsOpen] = useState(open);
   function setClosed() {
     setIsOpen(false);
@@ -29,9 +29,12 @@ const Modal: FunctionComponent<Props> = ({ open, children }) => {
         ></div>
         <div className="windowsModal">
           <div className="windowsModalBar">
-            <button className="modalBarButtons modalMinimize"></button>
-            <button className="modalBarButtons modalExpand"></button>
-            <button className="modalBarButtons modalClose"></button>
+            <span className="modalBarTitle">{title}</span>
+            <div>
+              <button className="modalBarButtons modalMinimize"></button>
+              <button className="modalBarButtons modalExpand"></button>
+              <button className="modalBarButtons modalClose"></button>
+            </div>
           </div>
           <div className="windowsModalContent">{children}</div>
         </div>

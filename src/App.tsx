@@ -104,7 +104,7 @@ function App() {
       </TreeList>
 
       <div>
-        <Modal open>
+        <Modal open title="Hello world!">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
           adipisci tempore maxime ut expedita alias, eligendi consectetur
           accusamus

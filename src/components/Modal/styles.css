@@ -16,12 +16,16 @@
   height: 38px;
   background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
+}
+.modalBarTitle {
+  font-family: "MS Sans Serif Bold", sans-serif;
+  margin-left: 6px;
+  color: white;
 }
 .modalBarButtons {
   background-repeat: no-repeat;
-  margin: 0 4px;
   width: 30px;
   height: 26px;
   background-color: #c0c0c0;
@@ -29,7 +33,6 @@
     inset -4px -4px 0px #808080, inset 4px 4px 0px #dfdfdf;
   cursor: pointer;
   border: none;
-  font-family: "MS Sans Serif Bold", sans-serif;
 }
 .modalBarButtons:active {
   box-shadow: inset -2px -2px 0px #ffffff, inset 2px 2px 0px #0a0a0a,
@@ -37,6 +40,7 @@
 }
 
 .modalClose {
+  margin: 0 4px;
   background-size: 16px;
   background-position: top 5px left 7px;
   background-image: url("../../assets/exit.svg");
