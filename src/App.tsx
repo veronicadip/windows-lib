@@ -11,13 +11,36 @@ import TreeList from "./components/TreeList/TreeList";
 import TreeItem from "./components/TreeItem/TreeItem";
 import ComputerIcon from "./components/Icons/computer_explorer_cool-4.png";
 import Modal from "./components/Modal/Modal";
-import FolderIcon from "./components/Icons/directory_open_cool-2.png";
-import TitleBar from "./components/TitleBar/TitleBar";
 
 function App() {
   return (
-    <div>
-      <Typography type="h1">Windows 98 elements</Typography>
+    <div className="wrapper">
+      <aside className="stickySideBar">
+        <TreeList fullHeight>
+          <TreeItem label={"Overview"}></TreeItem>
+          <TreeItem label={"Components"} openBranch>
+            <TreeItem label="Button"></TreeItem>
+            <TreeItem label="Icons"></TreeItem>
+            <TreeItem label="Input"></TreeItem>
+            <TreeItem label="Modal"></TreeItem>
+            <TreeItem label="Tabs" openBranch>
+              <TreeItem label="TabList"></TreeItem>
+              <TreeItem label="Tab"></TreeItem>
+              <TreeItem label="TabPanel"></TreeItem>
+            </TreeItem>
+            <TreeItem label={"TitleBar"}></TreeItem>
+            <TreeItem label={"TreeList"} openBranch>
+              <TreeItem label={"TreeItem"}></TreeItem>
+            </TreeItem>
+            <TreeItem label={"Typography"}></TreeItem>
+          </TreeItem>
+        </TreeList>
+      </aside>
+      <main>
+        <Typography type="h1">Windows 98 elements</Typography>
+      </main>
+
+      {/* <Typography type="h1">Windows 98 elements</Typography>
       <hr />
       <Typography bold={true} type="h2">
         Buttons
@@ -109,17 +132,13 @@ function App() {
         <Modal
           open
           title="Hello world!"
-          icon={<img src={FolderIcon} alt="computer icon" />}
+          icon={<img src={ComputerIcon} alt="computer icon" />}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
           adipisci tempore maxime ut expedita alias, eligendi consectetur
           accusamus
         </Modal>
-      </div>
-      <TitleBar
-        title="Hello world!"
-        icon={<img src={FolderIcon} alt="computer icon" />}
-      ></TitleBar>
+      </div> */}
     </div>
   );
 }

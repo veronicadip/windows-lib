@@ -8,10 +8,15 @@ import "./styles.css";
 
 interface Props extends PropsWithChildren {
   label: ReactNode;
+  openBranch?: boolean;
 }
 
-const TreeItem: FunctionComponent<Props> = ({ children, label }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const TreeItem: FunctionComponent<Props> = ({
+  children,
+  label,
+  openBranch,
+}) => {
+  const [isOpen, setIsOpen] = useState(!openBranch ? false : true);
   return (
     <div className="windowsTreeItem">
       <div

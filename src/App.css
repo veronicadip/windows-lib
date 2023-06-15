@@ -1,3 +1,5 @@
+/* LIB */
+/* TODO: search where to put the fonts */
 @font-face {
   font-family: "MS Sans Serif";
   src: url("./fonts/W95FA.otf") format("opentype");
@@ -15,4 +17,18 @@ body {
 
 a {
   color: #222222;
+}
+
+/* APP */
+.wrapper {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 10px;
+}
+.stickySideBar {
+  grid-column: 1 / 2;
+}
+.stickySideBar div {
+  position: sticky;
+  top: 12px;
 }
