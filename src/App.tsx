@@ -17,7 +17,7 @@ function App() {
     <div className="wrapper">
       <aside className="stickySideBar">
         <TreeList fullHeight>
-          <TreeItem label={"Overview"}></TreeItem>
+          <TreeItem label={"Introduction"}></TreeItem>
           <TreeItem label={"Components"} openBranch>
             <TreeItem label="Button"></TreeItem>
             <TreeItem label="Icons"></TreeItem>
@@ -37,7 +37,13 @@ function App() {
         </TreeList>
       </aside>
       <main>
-        <Typography type="h1">Windows 98 elements</Typography>
+        <Typography type="h1">Windows 98 UI</Typography>
+        <Typography type="h3">Introduction</Typography>
+        <Typography>
+          This library is a collection of React components developed using
+          TypeScript, designed to bring back the nostalgic look of Windows 98 to
+          your web applications.
+        </Typography>
       </main>
 
       {/* <Typography type="h1">Windows 98 elements</Typography>
