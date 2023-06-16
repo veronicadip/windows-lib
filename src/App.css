@@ -18,6 +18,9 @@ body {
 a {
   color: #222222;
 }
+p {
+  margin: 0;
+}
 
 /* APP */
 .wrapper {
@@ -42,6 +45,12 @@ a {
 .componentContainer {
   margin-right: 2rem;
 }
-.codeContainer {
+.codeWindow {
   width: 80rem;
+  margin-bottom: 2rem;
+}
+.codeContainer {
+  padding: 1rem 1rem 1rem 0.3rem;
+  height: auto;
+  background-color: #000;
 }

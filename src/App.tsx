@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
 import Typography from "./components/Typography/Typography";
@@ -15,6 +16,10 @@ import TitleBar from "./components/TitleBar/TitleBar";
 import DosIcon from "./components/Icons/ms_dos-1.png";
 
 function App() {
+  const [buttonContent, setButtonContent] = useState("See what I do");
+  function changeContent() {
+    setButtonContent("I change!");
+  }
   return (
     <div className="wrapper">
       <aside className="stickySideBar">
@@ -23,7 +28,7 @@ function App() {
           <TreeItem label={"Components"} openBranch>
             <TreeItem label="Button"></TreeItem>
             <TreeItem label="Icons"></TreeItem>
-            <TreeItem label="Input"></TreeItem>
+            <TreeItem label="Inputs"></TreeItem>
             <TreeItem label="Modal"></TreeItem>
             <TreeItem label="Tabs" openBranch>
               <TreeItem label="TabList"></TreeItem>
@@ -68,16 +73,32 @@ function App() {
           </Typography>
           <Typography white>
             {`This is a regular <Button /> component, you can pass strings
-            and Icon components as its children. You can also give it an ID with
-            a string value, and an event handler function for the click event.`}
+            and Icon components as its children.`}
           </Typography>
           <div className="componentsContainer">
             <div className="componentContainer">
-              <Button>Click me</Button>
+              <Button>
+                {"Click me! "}
+                <img src={SmileIcon} alt="smile windows 98 icon" />
+              </Button>
             </div>
           </div>
-          <div className="codeContainer">
+          <div className="codeWindow">
             <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+            <div className="codeContainer">
+              <Typography
+                white
+              >{`import Button from "./components/Button/Button";
+`}</Typography>
+              <Typography
+                white
+              >{`import SmileIcon from "./components/Icons/utopia_smiley.png";
+`}</Typography>
+              <br />
+              <Typography white>{`<Button>
+                Click me! <img src={SmileIcon} alt="smile windows 98 icon" />
+              </Button>`}</Typography>
+            </div>
           </div>
           <br />
           <Typography white>
@@ -91,24 +112,78 @@ function App() {
               <Button>Hi!</Button>
             </div>
           </div>
+          <div className="codeWindow">
+            <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+            <div className="codeContainer">
+              <Typography
+                white
+              >{`import Button from "./components/Button/Button";
+`}</Typography>
+              <br />
+              <Typography
+                white
+              >{`<Button>This is a larger button</Button>`}</Typography>
+              <Typography white>{` <Button>Hi!</Button>`}</Typography>
+            </div>
+          </div>
           <br />
           <Typography white>You can pass it a `disabled` prop.</Typography>
           <div className="componentsContainer">
             <Button disabled>Don't even try</Button>
           </div>
+          <div className="codeWindow">
+            <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+            <div className="codeContainer">
+              <Typography
+                white
+              >{`import Button from "./components/Button/Button";
+`}</Typography>
+              <br />
+              <Typography
+                white
+              >{`<Button disabled>Don't even try</Button>`}</Typography>
+            </div>
+          </div>
           <br />
+          <Typography white>
+            You can pass it an id and a event handler function for click events.
+          </Typography>
+          <div className="componentsContainer">
+            <Button id="idExample" clickEventHandler={() => changeContent()}>
+              {buttonContent}
+            </Button>
+          </div>
+          <div className="codeWindow">
+            <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+            <div className="codeContainer">
+              <Typography
+                white
+              >{`import Button from "./components/Button/Button";
+`}</Typography>
+              <br />
+              <Typography
+                white
+              >{`<Button id="idExample" clickEventHandler={ ( )  =>  changeContent( ) }>
+              {buttonContent}
+            </Button>`}</Typography>
+            </div>
+          </div>
+          <br />
+          <div className="sectionContainer">
+            <Typography white type="h4">
+              Icons
+            </Typography>
+            <Typography white></Typography>
+          </div>
+          <div className="sectionContainer">
+            <Typography white type="h4">
+              Inputs
+            </Typography>
+            <Typography white>To use</Typography>
+          </div>
         </div>
       </div>
-      {/* <Typography type="h1">Windows 98 elements</Typography>
-      <hr />
-      <Typography bold={true} type="h2">
-        Buttons
-      </Typography>
-      <Typography type="h4">Default</Typography>
-      <Button disabled={false}>Click me</Button>
-      <Typography type="h4">Disabled</Typography>
-      <Button disabled={true}>Don't even try</Button>
-      <hr />
+      {/*
       <Typography bold={true} type="h2">
         Typography
       </Typography>
