@@ -11,6 +11,8 @@ import TreeList from "./components/TreeList/TreeList";
 import TreeItem from "./components/TreeItem/TreeItem";
 import ComputerIcon from "./components/Icons/computer_explorer_cool-4.png";
 import Modal from "./components/Modal/Modal";
+import TitleBar from "./components/TitleBar/TitleBar";
+import DosIcon from "./components/Icons/ms_dos-1.png";
 
 function App() {
   return (
@@ -36,16 +38,67 @@ function App() {
           </TreeItem>
         </TreeList>
       </aside>
-      <main>
-        <Typography type="h1">Windows 98 UI</Typography>
-        <Typography type="h3">Introduction</Typography>
-        <Typography>
-          This library is a collection of React components developed using
-          TypeScript, designed to bring back the nostalgic look of Windows 98 to
-          your web applications.
+      <div>
+        <Typography type="h1" white>
+          Windows 98 UI
         </Typography>
-      </main>
-
+        <div className="sectionContainer">
+          <Typography type="h3" white>
+            Introduction
+          </Typography>
+          <Typography white>
+            This library is a collection of React components developed using
+            TypeScript, designed to bring back the nostalgic look of Windows 98
+            to your web applications. See more on{" "}
+            <a
+              href="https://github.com/veronicadip/windows-lib"
+              target="_blank"
+            >
+              GitHub
+            </a>
+            .
+          </Typography>
+        </div>
+        <div className="sectionContainer">
+          <Typography type="h3" white>
+            Components
+          </Typography>
+          <Typography type="h4" white>
+            Button
+          </Typography>
+          <Typography white>
+            {`This is a regular <Button /> component, you can pass strings
+            and Icon components as its children. You can also give it an ID with
+            a string value, and an event handler function for the click event.`}
+          </Typography>
+          <div className="componentsContainer">
+            <div className="componentContainer">
+              <Button>Click me</Button>
+            </div>
+          </div>
+          <div className="codeContainer">
+            <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+          </div>
+          <br />
+          <Typography white>
+            The element size varies depending on its children.
+          </Typography>
+          <div className="componentsContainer">
+            <div className="componentContainer">
+              <Button>This is a larger button</Button>
+            </div>
+            <div className="componentContainer">
+              <Button>Hi!</Button>
+            </div>
+          </div>
+          <br />
+          <Typography white>You can pass it a `disabled` prop.</Typography>
+          <div className="componentsContainer">
+            <Button disabled>Don't even try</Button>
+          </div>
+          <br />
+        </div>
+      </div>
       {/* <Typography type="h1">Windows 98 elements</Typography>
       <hr />
       <Typography bold={true} type="h2">

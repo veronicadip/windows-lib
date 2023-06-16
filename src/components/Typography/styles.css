@@ -57,3 +57,8 @@
   font-size: 0.79rem;
   font-family: "MS Sans Serif Bold", sans-serif;
 }
+
+/* white */
+.whiteFont {
+  color: #fff;
+}

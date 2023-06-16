@@ -32,3 +32,16 @@ a {
   position: sticky;
   top: 12px;
 }
+.sectionContainer {
+  margin: 5rem 0;
+}
+.componentsContainer {
+  display: flex;
+  margin: 2rem 0;
+}
+.componentContainer {
+  margin-right: 2rem;
+}
+.codeContainer {
+  width: 80rem;
+}

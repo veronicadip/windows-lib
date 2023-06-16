@@ -19,7 +19,10 @@ const TitleBar: FunctionComponent<Props> = ({
   return (
     <div className="windowsBar">
       <span className="barTitle">
-        <div className="barIcon">{icon}</div>
+        <div className="barIcon">
+          {" "}
+          <img src={`${icon}`} alt={`${title} icon`} />
+        </div>
         {title}
       </span>
       <div>
