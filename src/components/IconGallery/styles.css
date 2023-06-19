@@ -1,0 +1,33 @@
+.windowsIconGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #c0c0c0;
+  box-shadow: inset -2px -2px 0px #0a0a0a, inset 3px 3px 0px #ffffff,
+    inset -3px -3px 0px #808080, inset 3px 3px 0px #dfdfdf;
+  width: 56%;
+  margin: 5rem 0;
+  padding: 3rem 0;
+}
+.windowsIconContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15rem;
+  height: 7rem;
+  margin: 1rem;
+  box-shadow: inset -1px -1px 0px #0a0a0a, inset 1px 1px 0px #ffffff,
+    inset -2px -2px 0px #808080, inset 2px 2px 0px #dfdfdf;
+}
+.windowsIconContainer:active {
+  box-shadow: inset -1px -1px 0px #ffffff, inset 1px 1px 0px #0a0a0a,
+    inset -2px -2px 0px #dfdfdf, inset 2px 2px 0px #808080;
+}
+.windowsIcon {
+  margin-top: 1rem;
+}
+.windowsIconGallery p {
+  font-size: 0.8rem !important;
+  margin-bottom: 0.5rem;
+}
