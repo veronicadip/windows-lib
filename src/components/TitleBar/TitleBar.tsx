@@ -21,7 +21,7 @@ const TitleBar: FunctionComponent<Props> = ({
       <span className="barTitle">
         <div className="barIcon">
           {" "}
-          <img src={`${icon}`} alt={`${title} icon`} />
+          {icon ? <img src={`${icon}`} alt={`${title} icon`} /> : null}
         </div>
         {title}
       </span>
