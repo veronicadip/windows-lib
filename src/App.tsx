@@ -424,6 +424,107 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="sectionContainer">
+            <Typography white type="h4">
+              Tabs
+            </Typography>
+            <Typography
+              white
+            >{`The <Tabs /> component needs its children <TabList />, <Tab> and <TabPanel>. This component accepts a "selectedTab" prop to have that one selected by default, if you don't pass that prop, the value will be 1.`}</Typography>
+            <Typography white type="h5">
+              TabList
+            </Typography>
+            <Typography
+              white
+            >{`<TabList /> is the father of <Tab />, it contains the list of tabs.`}</Typography>
+            <Typography white type="h5">
+              Tab
+            </Typography>
+            <Typography white>
+              You will need to pass the prop "value" to match the TabPanel
+              component later. If you add two {`<Tab />`} components, you should
+              add the first one the value "1" and the second one "2".
+            </Typography>
+            <Typography white>
+              You can add the name of each Tab nesting it inside the component
+              tag.
+            </Typography>
+            <Typography white type="h5">
+              TabPanel
+            </Typography>
+            <Typography
+              white
+            >{`Like the <Tab /> component, you need to pass it a prop "value" matching the value of the Tab you want to link. If you add two Tab components, you need to add two TabPanel components as well.`}</Typography>
+            <div className="componentsContainer">
+              <Tabs>
+                <TabList>
+                  <Tab value={1}>About me</Tab>
+                  <Tab value={2}>Click me</Tab>
+                </TabList>
+                <TabPanel value={1}>
+                  <Typography>
+                    Follow me on{" "}
+                    <a href="https://github.com/veronicadip" target="_blank">
+                      GitHub
+                    </a>{" "}
+                    if you want to see more of my projects!
+                  </Typography>
+                  <Typography>
+                    I also have a{" "}
+                    <a href="https://veronicadip.github.io./">website</a> and a{" "}
+                    <a href="https://www.linkedin.com/in/veronica-dip/">
+                      LinkedIn
+                    </a>
+                    . <img src={SmileIcon} alt="smiley windows 98 icon" />
+                  </Typography>
+                </TabPanel>
+                <TabPanel value={2}>
+                  <Typography>
+                    Great! you changed tabs, this function comes with the
+                    library too.
+                  </Typography>
+                </TabPanel>
+              </Tabs>
+            </div>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography white>{`import Tabs from "./components/Tabs/Tabs";
+`}</Typography>
+                <Typography
+                  white
+                >{`import TabList from "./components/TabList/TabList";
+`}</Typography>
+                <Typography white>{`import Tab from "./components/Tab/Tab";
+`}</Typography>
+                <Typography
+                  white
+                >{`import TabPanel from "./components/TabPanel/TabPanel";
+`}</Typography>
+                <Typography white>{`<Tabs>`}</Typography>
+                <Typography white>{`<TabList>`}</Typography>
+                <Typography
+                  white
+                >{` <Tab value={1}>About me</Tab>`}</Typography>
+                <Typography
+                  white
+                >{` <Tab value={2}>Click me</Tab>`}</Typography>
+                <Typography white>{`</TabList>`}</Typography>
+                <Typography white>{`<TabPanel value={1}>`}</Typography>
+                <Typography
+                  white
+                >{`<p> Follow me on GitHub if you want to see more of my projects! </p>`}</Typography>
+                <Typography white>{`</TabPanel>`}</Typography>
+                <Typography white>{`<TabPanel value={2}>`}</Typography>
+                <Typography
+                  white
+                >{`<p> Great! you changed tabs, this function comes with the
+                    library too. </p>`}</Typography>
+                <Typography white>{`</TabPanel>`}</Typography>
+                <Typography white>{`</Tabs>`}</Typography>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

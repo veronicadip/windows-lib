@@ -84,7 +84,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   max-width: 50%;
-  margin: 3rem 0;
+  margin: 3rem 0 0;
 }
 .componentContainer {
   margin: 1rem 2rem 0 0;
@@ -102,7 +102,7 @@ p {
   padding: 3px;
   box-shadow: inset -2px -2px 0px #0a0a0a, inset 3px 3px 0px #ffffff,
     inset -3px -3px 0px #808080, inset 3px 3px 0px #dfdfdf;
-  margin: 4rem 0;
+  margin: 6rem 0;
 }
 .modalContent {
   display: flex;
