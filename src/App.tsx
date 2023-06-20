@@ -10,12 +10,13 @@ import TabPanel from "./components/TabPanel/TabPanel";
 import SmileIcon from "./components/Icons/utopia_smiley.png";
 import TreeList from "./components/TreeList/TreeList";
 import TreeItem from "./components/TreeItem/TreeItem";
-import ComputerIcon from "./components/Icons/computer_explorer_cool-4.png";
+import InfoIcon from "./components/Icons/msg_information-0.png";
 import Modal from "./components/Modal/Modal";
 import TitleBar from "./components/TitleBar/TitleBar";
 import DosIcon from "./components/Icons/ms_dos-1.png";
 import IconGallery from "./components/IconGallery/IconGallery";
 import ImgFolder from "./components/Icons/directory_open_cabinet_fc-2.png";
+import WindowsIcon from "./components/Icons/windows-0.png";
 
 function App() {
   const [buttonContent, setButtonContent] = useState("See what I do");
@@ -182,6 +183,10 @@ function App() {
                 <Typography
                   white
                 >{`import SmileIcon from "./components/Icons/utopia_smiley.png";`}</Typography>
+                <Typography
+                  white
+                >{`import Typography from "./components/Typography/Typography";
+`}</Typography>
                 <Typography white>
                   {`<Typography white>
               You can use any Windows 98 icon and put it anywhere, like this!
@@ -335,6 +340,88 @@ function App() {
             </div>
             <div className="componentsContainer">
               <Input disabled placeholder="Disabled"></Input>
+            </div>
+          </div>
+          <div className="sectionContainer">
+            <Typography white type="h4">
+              Modal
+            </Typography>
+            <Typography white>
+              The Modal component comes with a button that opens it but you can
+              pass it a prop named "open" and it will be opened by default.
+              Also, you can pass a prop "buttonContent" to customize the button
+              that opens the modal{" "}
+              {`(it comes with a default "Open Modal" string value.)`}.
+            </Typography>
+            <Typography white>
+              To add things inside the modal, you will need to nest them inside
+              the {`<Modal />`} component. To add a title and icon to the bar,
+              you need to pass the props "icon" and "title".
+            </Typography>
+            <div className="componentsContainer">
+              <Modal
+                icon={WindowsIcon}
+                title="Windows Modal"
+                buttonContent="Open me!"
+              >
+                <div className="modalContent">
+                  <div>
+                    <img src={InfoIcon} alt="Information windows icon" />
+                  </div>
+                  <div className="modalInfo">
+                    <Typography bold type="h6">
+                      You opened this modal!
+                    </Typography>
+                    <Typography>
+                      You can add anything in here! To close the modal, you can
+                      click outside it or press the cross button.
+                    </Typography>
+                  </div>
+                </div>
+              </Modal>
+            </div>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography
+                  white
+                >{`import Typography from "./components/Typography/Typography";
+`}</Typography>
+                <Typography
+                  white
+                >{`import Modal from "./components/Modal/Modal";
+`}</Typography>
+                <Typography
+                  white
+                >{`import InfoIcon from "./components/Icons/msg_information-0.png";
+`}</Typography>
+                <Typography
+                  white
+                >{`import WindowsIcon from "./components/Icons/windows-0.png";
+`}</Typography>
+                <Typography
+                  white
+                >{`<Modal icon={WindowsIcon} title="Windows Modal">`}</Typography>
+                <Typography
+                  white
+                >{`<div className="modalContent">`}</Typography>
+                <Typography white>{`<div>`}</Typography>
+                <Typography
+                  white
+                >{`<img src={InfoIcon} alt="Information windows icon" />`}</Typography>
+                <Typography white>{`</div>`}</Typography>
+                <Typography white>{`<div className="modalInfo">`}</Typography>
+                <Typography white>{`<Typography bold type="h6">
+                      You opened this modal!
+                    </Typography>`}</Typography>
+                <Typography white>{`<Typography>
+                      You can add anything in here! To close the modal, you can
+                      click outside it or press the cross button.
+                    </Typography>`}</Typography>
+                <Typography white>{`</div>`}</Typography>
+                <Typography white>{`</div>`}</Typography>
+                <Typography white>{`</Modal>`}</Typography>
+              </div>
             </div>
           </div>
         </div>

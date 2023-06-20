@@ -12,9 +12,16 @@ interface Props extends PropsWithChildren {
   open?: boolean;
   title?: ReactNode;
   icon?: ReactNode;
+  buttonContent?: ReactNode;
 }
 
-const Modal: FunctionComponent<Props> = ({ open, children, title, icon }) => {
+const Modal: FunctionComponent<Props> = ({
+  open,
+  children,
+  title,
+  icon,
+  buttonContent,
+}) => {
   const [isOpen, setIsOpen] = useState(open);
   function setClosed() {
     setIsOpen(false);
@@ -23,7 +30,11 @@ const Modal: FunctionComponent<Props> = ({ open, children, title, icon }) => {
     setIsOpen(true);
   }
   if (!isOpen) {
-    return <Button clickEventHandler={() => setOpen()}>Open Modal</Button>;
+    return (
+      <Button clickEventHandler={() => setOpen()}>
+        {!buttonContent ? "Open Modal" : buttonContent}
+      </Button>
+    );
   }
 
   return (
@@ -42,7 +53,9 @@ const Modal: FunctionComponent<Props> = ({ open, children, title, icon }) => {
           <div className="windowsModalContent">{children}</div>
         </div>
       </>
-      <Button clickEventHandler={() => setOpen()}>Open Modal</Button>
+      <Button clickEventHandler={() => setOpen()}>
+        {!buttonContent ? "Open Modal" : buttonContent}
+      </Button>
     </>
   );
 };
