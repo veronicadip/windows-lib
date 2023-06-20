@@ -19,7 +19,7 @@ a {
   color: #222222;
 }
 p {
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 /* APP */
@@ -36,7 +36,7 @@ p {
   top: 12px;
 }
 .sectionContainer {
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 .componentsContainer {
   display: flex;
@@ -58,7 +58,7 @@ p {
   padding: 3px;
   box-shadow: inset -2px -2px 0px #0a0a0a, inset 3px 3px 0px #ffffff,
     inset -3px -3px 0px #808080, inset 3px 3px 0px #dfdfdf;
-  margin: 3rem 0;
+  margin: 4rem 0;
 }
 
 *::-webkit-scrollbar {

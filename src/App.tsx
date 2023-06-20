@@ -97,13 +97,11 @@ function App() {
                 white
               >{`import SmileIcon from "./components/Icons/utopia_smiley.png";
 `}</Typography>
-              <br />
               <Typography white>{`<Button>
                 Click me! <img src={SmileIcon} alt="smile windows 98 icon" />
               </Button>`}</Typography>
             </div>
           </div>
-          <br />
           <Typography white>
             The element size varies depending on its children.
           </Typography>
@@ -122,14 +120,12 @@ function App() {
                 white
               >{`import Button from "./components/Button/Button";
 `}</Typography>
-              <br />
               <Typography
                 white
               >{`<Button>This is a larger button</Button>`}</Typography>
               <Typography white>{` <Button>Hi!</Button>`}</Typography>
             </div>
           </div>
-          <br />
           <Typography white>You can pass it a `disabled` prop.</Typography>
           <div className="componentsContainer">
             <Button disabled>Don't even try</Button>
@@ -141,13 +137,11 @@ function App() {
                 white
               >{`import Button from "./components/Button/Button";
 `}</Typography>
-              <br />
               <Typography
                 white
               >{`<Button disabled>Don't even try</Button>`}</Typography>
             </div>
           </div>
-          <br />
           <Typography white>
             You can pass it an id and a event handler function for click events.
           </Typography>
@@ -163,7 +157,6 @@ function App() {
                 white
               >{`import Button from "./components/Button/Button";
 `}</Typography>
-              <br />
               <Typography
                 white
               >{`<Button id="idExample" clickEventHandler={ ( )  =>  changeContent( ) }>
@@ -171,7 +164,6 @@ function App() {
             </Button>`}</Typography>
             </div>
           </div>
-          <br />
           <div className="sectionContainer">
             <Typography white type="h4">
               Icons
@@ -180,13 +172,16 @@ function App() {
               You can use any Windows 98 icon and put it anywhere, like this!{" "}
               <img src={SmileIcon} alt="smile windows 98 icon" />
             </Typography>
+            <Typography white>
+              You need to import the icon with the name you want to use. Then
+              use that name as the source for the {`<img />`} tag.
+            </Typography>
             <div className="windowsBorders">
               <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
               <div className="codeContainer">
                 <Typography
                   white
                 >{`import SmileIcon from "./components/Icons/utopia_smiley.png";`}</Typography>
-                <br />
                 <Typography white>
                   {`<Typography white>
               You can use any Windows 98 icon and put it anywhere, like this!
