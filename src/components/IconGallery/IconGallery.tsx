@@ -1,11 +1,18 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import "./styles.css";
 import Typography from "./../Typography/Typography";
-interface Props {}
 
-const IconGallery: FunctionComponent<Props> = ({}) => {
+interface Props {
+  open?: boolean;
+}
+
+const IconGallery: FunctionComponent<Props> = ({ open }) => {
+  const [isOpen, setIsOpen] = useState(!open ? false : true);
   const icons = require.context("./../Icons", false, /\.(png)$/);
 
+  if (!isOpen) {
+    return <></>;
+  }
   return (
     <div className="windowsIconGallery">
       {icons.keys().map((iconPath, index) => (

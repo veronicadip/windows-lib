@@ -3,11 +3,10 @@
   flex-wrap: wrap;
   justify-content: center;
   background-color: #c0c0c0;
-  box-shadow: inset -2px -2px 0px #0a0a0a, inset 3px 3px 0px #ffffff,
-    inset -3px -3px 0px #808080, inset 3px 3px 0px #dfdfdf;
-  width: 56%;
-  margin: 5rem 0;
   padding: 3rem 0;
+  width: 100%;
+  max-height: 50rem;
+  overflow: auto;
 }
 .windowsIconContainer {
   display: flex;

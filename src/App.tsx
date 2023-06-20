@@ -15,6 +15,7 @@ import Modal from "./components/Modal/Modal";
 import TitleBar from "./components/TitleBar/TitleBar";
 import DosIcon from "./components/Icons/ms_dos-1.png";
 import IconGallery from "./components/IconGallery/IconGallery";
+import ImgFolder from "./components/Icons/directory_open_cabinet_fc-2.png";
 
 function App() {
   const [buttonContent, setButtonContent] = useState("See what I do");
@@ -85,7 +86,7 @@ function App() {
               </Button>
             </div>
           </div>
-          <div className="codeWindow">
+          <div className="windowsBorders">
             <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
             <div className="codeContainer">
               <Typography
@@ -114,7 +115,7 @@ function App() {
               <Button>Hi!</Button>
             </div>
           </div>
-          <div className="codeWindow">
+          <div className="windowsBorders">
             <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
             <div className="codeContainer">
               <Typography
@@ -133,7 +134,7 @@ function App() {
           <div className="componentsContainer">
             <Button disabled>Don't even try</Button>
           </div>
-          <div className="codeWindow">
+          <div className="windowsBorders">
             <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
             <div className="codeContainer">
               <Typography
@@ -155,7 +156,7 @@ function App() {
               {buttonContent}
             </Button>
           </div>
-          <div className="codeWindow">
+          <div className="windowsBorders">
             <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
             <div className="codeContainer">
               <Typography
@@ -179,9 +180,7 @@ function App() {
               You can use any Windows 98 icon and put it anywhere, like this!{" "}
               <img src={SmileIcon} alt="smile windows 98 icon" />
             </Typography>
-            <br />
-            <br />
-            <div className="codeWindow">
+            <div className="windowsBorders">
               <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
               <div className="codeContainer">
                 <Typography
@@ -189,10 +188,6 @@ function App() {
                 >{`import SmileIcon from "./components/Icons/utopia_smiley.png";`}</Typography>
                 <br />
                 <Typography white>
-                  <Typography white>
-                    You can use any Windows 98 icon and put it anywhere, like
-                    this! <img src={SmileIcon} alt="smile windows 98 icon" />
-                  </Typography>
                   {`<Typography white>
               You can use any Windows 98 icon and put it anywhere, like this!
               <img src={SmileIcon} alt="smile windows 98 icon" />
@@ -200,7 +195,10 @@ function App() {
                 </Typography>
               </div>
             </div>
-            <IconGallery />
+            <div className="windowsBorders">
+              <TitleBar icon={ImgFolder} title="List of icons"></TitleBar>
+              <IconGallery open />
+            </div>
           </div>
         </div>
       </div>
