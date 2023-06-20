@@ -13,7 +13,6 @@
 body {
   font-size: 1.2rem;
   font-family: "MS Sans Serif", sans-serif;
-  overflow: auto;
 }
 
 a {
@@ -26,8 +25,8 @@ p {
 /* APP */
 .wrapper {
   display: grid;
-  grid-template-columns: 10% 90%;
-  gap: 10px;
+  grid-template-columns: 10% 88%;
+  gap: 40px;
 }
 .stickySideBar {
   grid-column: 1 / 2;
