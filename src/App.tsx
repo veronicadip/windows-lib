@@ -190,9 +190,148 @@ function App() {
                 </Typography>
               </div>
             </div>
+            <Typography white>
+              Here you will find all the Windows 98 icons with each name to
+              import them:
+            </Typography>
             <div className="windowsBorders">
               <TitleBar icon={ImgFolder} title="List of icons"></TitleBar>
               <IconGallery />
+            </div>
+          </div>
+          <div className="sectionContainer">
+            <Typography white type="h4">
+              Inputs
+            </Typography>
+            <Typography white>
+              To use the available inputs in Windows 98, you'll need to use the{" "}
+              {`<Input />`} component. It accepts the "type" prop{" "}
+              {`(email, number, password, search, tel, text and url)`}, if you
+              don't add any type, it will be a text type by default.
+            </Typography>
+            <div className="componentsContainer">
+              <Input />
+            </div>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography white>
+                  import Input from "./components/Input/Input";
+                </Typography>
+                <Typography white>{`<Input />`}</Typography>
+              </div>
+            </div>
+            <Typography white>
+              The Input component also accepts the next props: placeholder,
+              required, disabled and id.
+            </Typography>
+            <div className="componentsContainer">
+              <div className="componentContainer">
+                <Input
+                  type="text"
+                  placeholder="Username"
+                  id="username"
+                  required
+                ></Input>
+              </div>
+              <div className="componentContainer">
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  required
+                ></Input>
+              </div>
+              <div className="componentContainer">
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  id="email"
+                  required
+                ></Input>
+              </div>
+              <div className="componentContainer">
+                <Input
+                  type="number"
+                  placeholder="Age"
+                  id="age"
+                  required
+                ></Input>
+              </div>
+              <div className="componentContainer">
+                <Input type="tel" placeholder="Tel" id="tel" required></Input>
+              </div>
+              <div className="componentContainer">
+                <Input
+                  type="url"
+                  placeholder="Website"
+                  id="website"
+                  required
+                ></Input>
+              </div>
+            </div>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography
+                  white
+                >{`import Input from "./components/Input/Input";
+`}</Typography>
+                <Typography white>{`<Input
+                  type="text"
+                  placeholder="Username"
+                  id="username"
+                  required
+                ></Input>`}</Typography>
+                <Typography white>{`<Input
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  required
+                ></Input>`}</Typography>
+                <Typography white>{`<Input
+                  type="email"
+                  placeholder="Email"
+                  id="email"
+                  required
+                ></Input>`}</Typography>
+                <Typography white>{`<Input
+                  type="number"
+                  placeholder="Age"
+                  id="age"
+                  required
+                ></Input>`}</Typography>
+                <Typography
+                  white
+                >{` <Input type="tel" placeholder="Tel" id="tel" required></Input>`}</Typography>
+                <Typography white>{`<Input
+                  type="url"
+                  placeholder="Website"
+                  id="website"
+                  required
+                ></Input>`}</Typography>
+              </div>
+            </div>
+            <div className="componentsContainer">
+              <Input
+                type="search"
+                placeholder="Search Bar"
+                id="searchBar"
+              ></Input>
+            </div>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography
+                  white
+                >{`import Input from "./components/Input/Input";
+`}</Typography>
+                <Typography white>{`<Input
+                type="search"
+                placeholder="Search Bar"
+                id="searchBar"
+              ></Input>`}</Typography>
+              </div>
             </div>
           </div>
         </div>

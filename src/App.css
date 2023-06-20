@@ -36,14 +36,16 @@ p {
   top: 12px;
 }
 .sectionContainer {
-  margin: 3rem 0;
+  margin: 8rem 0;
 }
 .componentsContainer {
   display: flex;
-  margin: 2rem 0;
+  flex-wrap: wrap;
+  max-width: 50%;
+  margin: 3rem 0;
 }
 .componentContainer {
-  margin-right: 2rem;
+  margin: 1rem 2rem 0 0;
 }
 .codeWindow {
   width: 80rem;
