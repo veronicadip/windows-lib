@@ -1,35 +1,39 @@
 .windowsInput {
-    width: 17.5rem;
-    height: 2rem;
-    left: 16px;
-    top: 16px;
-    background-color: #FFFFFF;
-    box-shadow: inset -2px -2px 0px #FFFFFF, inset 2px 2px 0px #808080, inset -3px -3px 0px #DFDFDF, inset 3px 3px 0px #0A0A0A;
-    border: none;
-    font-family: 'MS Sans Serif', sans-serif;
-    font-size: 1.2rem;
-    padding-left: 5px;
+  width: 17.5rem;
+  height: 2rem;
+  left: 16px;
+  top: 16px;
+  background-color: #ffffff;
+  box-shadow: inset -2px -2px 0px #ffffff, inset 2px 2px 0px #808080,
+    inset -3px -3px 0px #dfdfdf, inset 3px 3px 0px #0a0a0a;
+  border: none;
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 1.2rem;
+  padding-left: 5px;
 }
 
 .windowsInput:focus {
-    outline: none;
+  outline: none;
+}
+
+.disabledWindowsInput {
+  background-color: #c0c0c0;
 }
 
 /* NUMBER INPUT */
 /* Chrome, Safari, Edge, Opera */
 input[type="number"] {
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 /* Firefox */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 /* SEARCH INPUT */
 input[type="search"]::-webkit-search-cancel-button {
-    display: none;
-  }
-  
+  display: none;
+}

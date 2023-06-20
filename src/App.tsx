@@ -333,6 +333,9 @@ function App() {
               ></Input>`}</Typography>
               </div>
             </div>
+            <div className="componentsContainer">
+              <Input disabled placeholder="Disabled"></Input>
+            </div>
           </div>
         </div>
       </div>

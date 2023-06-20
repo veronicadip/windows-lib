@@ -28,48 +28,17 @@ const Input: FunctionComponent<Props> = ({
   ) {
     return <></>;
   }
-  if (!type && !placeholder) {
-    return (
-      <input
-        type="text"
-        className="windowsInput"
-        required={required}
-        disabled={disabled}
-        id={id}
-      />
-    );
-  }
-  if (!type) {
-    return (
-      <input
-        type="text"
-        placeholder={placeholder}
-        className="windowsInput"
-        required={required}
-        disabled={disabled}
-        id={id}
-      />
-    );
-  }
-  if (placeholder && type) {
-    return (
-      <input
-        type={type}
-        placeholder={placeholder}
-        className="windowsInput"
-        required={required}
-        disabled={disabled}
-        id={id}
-      />
-    );
-  }
   return (
     <input
-      type={type}
-      className="windowsInput"
+      type={!type ? "text" : type}
+      placeholder={placeholder}
       required={required}
       disabled={disabled}
       id={id}
+      className={
+        !disabled ? "windowsInput" : "windowsInput disabledWindowsInput"
+      }
+      key={id}
     />
   );
 };
