@@ -81,27 +81,32 @@ p {
   display: block;
   height: 17px;
   background: #dfdfdf;
-  background-image: url("./assets/arrow.svg");
   background-repeat: no-repeat;
-  transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
 }
+
 *::-webkit-scrollbar-button:vertical:start:increment {
   display: none;
 }
 *::-webkit-scrollbar-button:vertical:start:decrement {
-  transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-}
-*::-webkit-scrollbar-button:horizontal:start:decrement {
-  display: none;
-}
-*::-webkit-scrollbar-button:vertical:end:increment {
+  background-image: url("./assets/arrow-up.svg");
 }
 *::-webkit-scrollbar-button:vertical:end:decrement {
   display: none;
 }
+*::-webkit-scrollbar-button:vertical:end:increment {
+  background-image: url("./assets/arrow-down.svg");
+}
+
+*::-webkit-scrollbar-button:horizontal:start:decrement {
+  background-image: url("./assets/arrow-left.svg");
+}
+*::-webkit-scrollbar-button:horizontal:start:increment {
+  display: none;
+}
 *::-webkit-scrollbar-button:horizontal:end:increment {
+  background-image: url("./assets/arrow-right.svg");
+}
+*::-webkit-scrollbar-button:horizontal:end:decrement {
   display: none;
 }
 *::-webkit-scrollbar-corner {

@@ -197,7 +197,7 @@ function App() {
             </div>
             <div className="windowsBorders">
               <TitleBar icon={ImgFolder} title="List of icons"></TitleBar>
-              <IconGallery open />
+              <IconGallery />
             </div>
           </div>
         </div>
