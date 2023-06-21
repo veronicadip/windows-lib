@@ -108,7 +108,7 @@ function App() {
 import SmileIcon from "./components/Icons/utopia_smiley.png";
 
 <Button>
-  Click me! <img src={SmileIcon} alt="smile windows 98 icon" />
+  {"Click me! "} <img src={SmileIcon} alt="smile windows 98 icon" />
 </Button>;
               `}</Typography>
             </div>
@@ -449,6 +449,7 @@ import WindowsIcon from "./components/Icons/windows-0.png";
                 </TabPanel>
               </Tabs>
             </div>
+            <br />
             <div className="windowsBorders">
               <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
               <div className="codeContainer">
@@ -519,7 +520,6 @@ import MineIcon from "./components/Icons/game_mine_1-1.png";
             <Typography white type="h4">
               TreeList and TreeItem
             </Typography>
-            <Typography white>TreeList</Typography>
             <Typography white>
               <strong>TreeList</strong> is used to contain one or more nested
               TreeItems. You can pass an optional `fullHeight` prop to make it
@@ -535,7 +535,6 @@ import MineIcon from "./components/Icons/game_mine_1-1.png";
               A <strong>TreeItem</strong> requires a `label` prop, which can be
               a ReactNode, allowing you to put icons, emojis, text, etc.
             </Typography>
-
             <Typography white>
               A <strong>TreeItem</strong> can be opened or closed, and you can
               control this state using the `openBranch` prop.
@@ -565,12 +564,12 @@ import MineIcon from "./components/Icons/game_mine_1-1.png";
                   openBranch
                 ></TreeItem>
               </TreeList>
-
-              <div className="windowsBorders">
-                <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
-                <div className="codeContainer">
-                  <Typography type="pre" white>
-                    {`import TreeList from './components/TreeList/Treelist'
+            </div>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography type="pre" white>
+                  {`import TreeList from './components/TreeList/Treelist'
 import TreeItem from "./components/TreeList/Treelist";
 
 <TreeList>
@@ -583,8 +582,7 @@ import TreeItem from "./components/TreeList/Treelist";
   <TreeItem label={<IconWithText icon={MonitorIcon} text="Monitor" />} openBranch></TreeItem>
 </TreeList>
 `}
-                  </Typography>
-                </div>
+                </Typography>
               </div>
             </div>
           </div>
@@ -604,7 +602,6 @@ import TreeItem from "./components/TreeList/Treelist";
                 This is a {tag}
               </Typography>
             ))}
-
             <Typography>
               By default, Typography is color black and font-weight regular,
             </Typography>
@@ -614,6 +611,26 @@ import TreeItem from "./components/TreeList/Treelist";
             <Typography white bold>
               You can also add the `bold` prop to make the text bold.
             </Typography>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography white type="pre">
+                  {`import Typography from "./components/Typography/Typography";
+<>
+  <Typography white type="h1">
+    This is a h1
+  </Typography>
+  ...
+  <Typography>By default, Typography is color black and font-weight regular,</Typography>
+  <Typography white>You can add the "white" prop to make the text white.</Typography>
+  <Typography white bold>
+    You can also add the "bold" prop to make the text bold.
+  </Typography>
+</>;
+`}
+                </Typography>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { FunctionComponent, PropsWithChildren, CSSProperties } from "react";
+import { FunctionComponent, PropsWithChildren } from "react";
 import "./styles.css";
 
 export interface Props extends PropsWithChildren {

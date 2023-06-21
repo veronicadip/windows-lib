@@ -84,7 +84,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   max-width: 50%;
-  margin: 3rem 0 0;
+  margin: 3rem 0;
 }
 .componentContainer {
   margin: 1rem 2rem 0 0;
@@ -115,4 +115,7 @@ p {
 }
 .modalInfo h6 {
   margin: 0.3rem 0 1rem;
+}
+.sectionContainer h6 {
+  margin: 1.7rem 0;
 }
