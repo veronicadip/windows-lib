@@ -348,7 +348,7 @@ import Typography from "./components/Typography/Typography";
                     <img src={InfoIcon} alt="Information windows icon" />
                   </div>
                   <div className="modalInfo">
-                    <Typography bold type="h6">
+                    <Typography bold type="h5">
                       You opened this modal!
                     </Typography>
                     <Typography>
