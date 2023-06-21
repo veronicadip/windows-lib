@@ -103,15 +103,14 @@ function App() {
             <div className="codeContainer">
               <Typography
                 white
+                type="pre"
               >{`import Button from "./components/Button/Button";
-`}</Typography>
-              <Typography
-                white
-              >{`import SmileIcon from "./components/Icons/utopia_smiley.png";
-`}</Typography>
-              <Typography white>{`<Button>
-                Click me! <img src={SmileIcon} alt="smile windows 98 icon" />
-              </Button>`}</Typography>
+import SmileIcon from "./components/Icons/utopia_smiley.png";
+
+<Button>
+  Click me! <img src={SmileIcon} alt="smile windows 98 icon" />
+</Button>;
+              `}</Typography>
             </div>
           </div>
           <Typography white>
@@ -130,12 +129,11 @@ function App() {
             <div className="codeContainer">
               <Typography
                 white
+                type="pre"
               >{`import Button from "./components/Button/Button";
-`}</Typography>
-              <Typography
-                white
-              >{`<Button>This is a larger button</Button>`}</Typography>
-              <Typography white>{` <Button>Hi!</Button>`}</Typography>
+
+<Button>This is a larger button</Button>
+<Button>Hi!</Button>`}</Typography>
             </div>
           </div>
           <Typography white>You can pass it a `disabled` prop.</Typography>
@@ -147,11 +145,10 @@ function App() {
             <div className="codeContainer">
               <Typography
                 white
+                type="pre"
               >{`import Button from "./components/Button/Button";
-`}</Typography>
-              <Typography
-                white
-              >{`<Button disabled>Don't even try</Button>`}</Typography>
+
+<Button disabled>Don't even try</Button>;`}</Typography>
             </div>
           </div>
           <Typography white>
@@ -167,13 +164,12 @@ function App() {
             <div className="codeContainer">
               <Typography
                 white
+                type="pre"
               >{`import Button from "./components/Button/Button";
-`}</Typography>
-              <Typography
-                white
-              >{`<Button id="idExample" clickEventHandler={ ( )  =>  changeContent( ) }>
-              {buttonContent}
-            </Button>`}</Typography>
+
+<Button id="idExample" clickEventHandler={ ( ) => changeContent( ) } >
+  {buttonContent}
+</Button>;`}</Typography>
             </div>
           </div>
           <div className="sectionContainer" id="icons">
@@ -191,18 +187,13 @@ function App() {
             <div className="windowsBorders">
               <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
               <div className="codeContainer">
-                <Typography
-                  white
-                >{`import SmileIcon from "./components/Icons/utopia_smiley.png";`}</Typography>
-                <Typography
-                  white
-                >{`import Typography from "./components/Typography/Typography";
-`}</Typography>
-                <Typography white>
-                  {`<Typography white>
-              You can use any Windows 98 icon and put it anywhere, like this!
-              <img src={SmileIcon} alt="smile windows 98 icon" />
-            </Typography>`}
+                <Typography white type="pre">
+                  {`import SmileIcon from "./components/Icons/utopia_smiley.png";
+import Typography from "./components/Typography/Typography";
+<Typography white>
+  You can use any Windows 98 icon and put it anywhere, like this!
+  <img src={SmileIcon} alt="smile windows 98 icon" />
+</Typography>;`}
                 </Typography>
               </div>
             </div>
@@ -291,41 +282,17 @@ function App() {
               <div className="codeContainer">
                 <Typography
                   white
+                  type="pre"
                 >{`import Input from "./components/Input/Input";
-`}</Typography>
-                <Typography white>{`<Input
-                  type="text"
-                  placeholder="Username"
-                  id="username"
-                  required
-                ></Input>`}</Typography>
-                <Typography white>{`<Input
-                  type="password"
-                  placeholder="Password"
-                  id="password"
-                  required
-                ></Input>`}</Typography>
-                <Typography white>{`<Input
-                  type="email"
-                  placeholder="Email"
-                  id="email"
-                  required
-                ></Input>`}</Typography>
-                <Typography white>{`<Input
-                  type="number"
-                  placeholder="Age"
-                  id="age"
-                  required
-                ></Input>`}</Typography>
-                <Typography
-                  white
-                >{` <Input type="tel" placeholder="Tel" id="tel" required></Input>`}</Typography>
-                <Typography white>{`<Input
-                  type="url"
-                  placeholder="Website"
-                  id="website"
-                  required
-                ></Input>`}</Typography>
+                
+<>
+  <Input type="text" placeholder="Username" id="username" required></Input>
+  <Input type="password" placeholder="Password" id="password" required></Input>
+  <Input type="email" placeholder="Email" id="email" required></Input>
+  <Input type="number" placeholder="Age" id="age" required></Input>
+  <Input type="tel" placeholder="Tel" id="tel" required></Input>
+  <Input type="url" placeholder="Website" id="website" required></Input>
+</>;`}</Typography>
               </div>
             </div>
             <div className="componentsContainer">
@@ -396,42 +363,27 @@ function App() {
               <div className="codeContainer">
                 <Typography
                   white
+                  type="pre"
                 >{`import Typography from "./components/Typography/Typography";
-`}</Typography>
-                <Typography
-                  white
-                >{`import Modal from "./components/Modal/Modal";
-`}</Typography>
-                <Typography
-                  white
-                >{`import InfoIcon from "./components/Icons/msg_information-0.png";
-`}</Typography>
-                <Typography
-                  white
-                >{`import WindowsIcon from "./components/Icons/windows-0.png";
-`}</Typography>
-                <Typography
-                  white
-                >{`<Modal icon={WindowsIcon} title="Windows Modal">`}</Typography>
-                <Typography
-                  white
-                >{`<div className="modalContent">`}</Typography>
-                <Typography white>{`<div>`}</Typography>
-                <Typography
-                  white
-                >{`<img src={InfoIcon} alt="Information windows icon" />`}</Typography>
-                <Typography white>{`</div>`}</Typography>
-                <Typography white>{`<div className="modalInfo">`}</Typography>
-                <Typography white>{`<Typography bold type="h6">
-                      You opened this modal!
-                    </Typography>`}</Typography>
-                <Typography white>{`<Typography>
-                      You can add anything in here! To close the modal, you can
-                      click outside it or press the cross button.
-                    </Typography>`}</Typography>
-                <Typography white>{`</div>`}</Typography>
-                <Typography white>{`</div>`}</Typography>
-                <Typography white>{`</Modal>`}</Typography>
+import Modal from "./components/Modal/Modal";
+import InfoIcon from "./components/Icons/msg_information-0.png";
+import WindowsIcon from "./components/Icons/windows-0.png";
+
+<Modal icon={WindowsIcon} title="Windows Modal" buttonContent="Open me!">
+  <div className="modalContent">
+    <div>
+      <img src={InfoIcon} alt="Information windows icon" />
+    </div>
+    <div className="modalInfo">
+      <Typography bold type="h6">
+        You opened this modal!
+      </Typography>
+      <Typography>
+        You can add anything in here! To close the modal, you can click outside it or press the cross button.
+      </Typography>
+    </div>
+  </div>
+</Modal>;`}</Typography>
               </div>
             </div>
           </div>
@@ -500,39 +452,38 @@ function App() {
             <div className="windowsBorders">
               <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
               <div className="codeContainer">
-                <Typography white>{`import Tabs from "./components/Tabs/Tabs";
+                <Typography
+                  white
+                  type="pre"
+                >{`import Tabs from "./components/Tabs/Tabs";
+import TabList from "./components/TabList/TabList";
+import Tab from "./components/Tab/Tab";
+import TabPanel from "./components/TabPanel/TabPanel";
+
+<Tabs>
+  <TabList>
+    <Tab value={1}>About me</Tab>
+    <Tab value={2}>Click me</Tab>
+  </TabList>
+  <TabPanel value={1}>
+    <Typography>
+      Follow me on{" "}
+      <a href="https://github.com/veronicadip" target="_blank">
+        GitHub
+      </a>{" "}
+      if you want to see more of my projects!
+    </Typography>
+    <Typography>
+      I also have a <a href="https://veronicadip.github.io./">website</a> and a{" "}
+      <a href="https://www.linkedin.com/in/veronica-dip/">LinkedIn</a>
+      . <img src={SmileIcon} alt="smiley windows 98 icon" />
+    </Typography>
+  </TabPanel>
+  <TabPanel value={2}>
+    <Typography>Great! you changed tabs, this function comes with the library too.</Typography>
+  </TabPanel>
+</Tabs>;
 `}</Typography>
-                <Typography
-                  white
-                >{`import TabList from "./components/TabList/TabList";
-`}</Typography>
-                <Typography white>{`import Tab from "./components/Tab/Tab";
-`}</Typography>
-                <Typography
-                  white
-                >{`import TabPanel from "./components/TabPanel/TabPanel";
-`}</Typography>
-                <Typography white>{`<Tabs>`}</Typography>
-                <Typography white>{`<TabList>`}</Typography>
-                <Typography
-                  white
-                >{` <Tab value={1}>About me</Tab>`}</Typography>
-                <Typography
-                  white
-                >{` <Tab value={2}>Click me</Tab>`}</Typography>
-                <Typography white>{`</TabList>`}</Typography>
-                <Typography white>{`<TabPanel value={1}>`}</Typography>
-                <Typography
-                  white
-                >{`<p> Follow me on GitHub if you want to see more of my projects! </p>`}</Typography>
-                <Typography white>{`</TabPanel>`}</Typography>
-                <Typography white>{`<TabPanel value={2}>`}</Typography>
-                <Typography
-                  white
-                >{`<p> Great! you changed tabs, this function comes with the
-                    library too. </p>`}</Typography>
-                <Typography white>{`</TabPanel>`}</Typography>
-                <Typography white>{`</Tabs>`}</Typography>
               </div>
             </div>
           </div>
@@ -556,15 +507,11 @@ function App() {
               <div className="codeContainer">
                 <Typography
                   white
+                  type="pre"
                 >{`import TitleBar from "./components/TitleBar/TitleBar";
-`}</Typography>
-                <Typography
-                  white
-                >{`import MineIcon from "./components/Icons/game_mine_1-1.png";
-`}</Typography>
-                <Typography
-                  white
-                >{`<TitleBar icon={MineIcon} title="Minesweeper"></TitleBar>`}</Typography>
+import MineIcon from "./components/Icons/game_mine_1-1.png";
+
+<TitleBar icon={MineIcon} title="Minesweeper"></TitleBar>`}</Typography>
               </div>
             </div>
           </div>
