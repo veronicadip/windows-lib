@@ -1,13 +1,7 @@
 # Windows 98 UI
 
-## Available Scripts
+## About this project
 
-In the project directory, you can run:
+Windows 98 UI is a React library that contains ready-to-use components (they come with the expected functionality). All the components and other things (like the scrollbar) comes with an exact styling replica of the Windows 98 interface.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![plot](./src/assets/screenshots/Screen%20Shot%202023-06-21%20at%203.15.32%20PM.png)
