@@ -26,6 +26,7 @@ import CDRomIcon from "./components/Icons/cd_drive-2.png";
 import MouseIcon from "./components/Icons/mouse-4.png";
 import KeyboardIcon from "./components/Icons/keyboard-1.png";
 import MonitorIcon from "./components/Icons/monitor_windows.png";
+import ExplorerIcon from "./components/Icons/msie1-0.png";
 
 function App() {
   const [buttonContent, setButtonContent] = useState("See what I do");
@@ -631,6 +632,52 @@ import TreeItem from "./components/TreeList/Treelist";
                 </Typography>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="windowsBorders"></div>
+        <div className="componentsContainer">
+          <div className="componentContainer">
+            <IconWithText
+              icon={ExplorerIcon}
+              text={
+                <a href="https://github.com/veronicadip" target="_blank">
+                  Github
+                </a>
+              }
+            ></IconWithText>
+          </div>
+          <div className="componentContainer">
+            <IconWithText
+              icon={ExplorerIcon}
+              text={
+                <a href="https://veronicadip.github.io./" target="_blank">
+                  Website
+                </a>
+              }
+            ></IconWithText>
+          </div>
+          <div className="componentContainer">
+            <IconWithText
+              icon={ExplorerIcon}
+              text={
+                <a
+                  href="https://www.linkedin.com/in/veronica-dip/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>
+              }
+            ></IconWithText>
+          </div>
+          <div className="componentContainer">
+            <IconWithText
+              icon={ExplorerIcon}
+              text={
+                <a href="https://twitter.com/mveronicadip" target="_blank">
+                  Twitter
+                </a>
+              }
+            ></IconWithText>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 import "./styles.css";
 
 interface Props {
   icon: string;
-  text: string;
+  text: ReactNode;
 }
 
 const IconWithText: FunctionComponent<Props> = ({ icon, text }) => {
