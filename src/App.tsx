@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
-import Typography from "./components/Typography/Typography";
+import Typography, {
+  Props as TypographyProps,
+} from "./components/Typography/Typography";
 import Input from "./components/Input/Input";
 import Tabs from "./components/Tabs/Tabs";
 import TabList from "./components/TabList/TabList";
@@ -15,8 +17,15 @@ import Modal from "./components/Modal/Modal";
 import TitleBar from "./components/TitleBar/TitleBar";
 import DosIcon from "./components/Icons/ms_dos-1.png";
 import IconGallery from "./components/IconGallery/IconGallery";
-import ImgFolder from "./components/Icons/directory_open_cabinet_fc-2.png";
+import ImgFolderIcon from "./components/Icons/directory_open_cabinet_fc-2.png";
 import WindowsIcon from "./components/Icons/windows-0.png";
+import MineIcon from "./components/Icons/game_mine_1-1.png";
+import ComputerIcon from "./components/Icons/computer-2.png";
+import IconWithText from "./components/IconWithText/IconWithText";
+import CDRomIcon from "./components/Icons/cd_drive-2.png";
+import MouseIcon from "./components/Icons/mouse-4.png";
+import KeyboardIcon from "./components/Icons/keyboard-1.png";
+import MonitorIcon from "./components/Icons/monitor_windows.png";
 
 function App() {
   const [buttonContent, setButtonContent] = useState("See what I do");
@@ -28,22 +37,24 @@ function App() {
     <div className="wrapper">
       <aside className="stickySideBar">
         <TreeList fullHeight>
-          <TreeItem label={"Introduction"}></TreeItem>
-          <TreeItem label={"Components"} openBranch>
-            <TreeItem label="Button"></TreeItem>
-            <TreeItem label="Icons"></TreeItem>
-            <TreeItem label="Inputs"></TreeItem>
-            <TreeItem label="Modal"></TreeItem>
-            <TreeItem label="Tabs" openBranch>
-              <TreeItem label="TabList"></TreeItem>
-              <TreeItem label="Tab"></TreeItem>
-              <TreeItem label="TabPanel"></TreeItem>
+          <TreeItem label={<a href="#introduction">Introduction</a>}></TreeItem>
+          <TreeItem label={<a href="#components">Components</a>} openBranch>
+            <TreeItem label={<a href="#button">Button</a>}></TreeItem>
+            <TreeItem label={<a href="#icons">Icons</a>}></TreeItem>
+            <TreeItem label={<a href="#inputs">Inputs</a>}></TreeItem>
+            <TreeItem label={<a href="#modal">Modal</a>}></TreeItem>
+            <TreeItem label={<a href="#tabs">Tabs</a>} openBranch>
+              <TreeItem label={<a href="#tabs">TabList</a>}></TreeItem>
+              <TreeItem label={<a href="#tabs">Tab</a>}></TreeItem>
+              <TreeItem label={<a href="#tabs">TabPanel</a>}></TreeItem>
             </TreeItem>
-            <TreeItem label={"TitleBar"}></TreeItem>
-            <TreeItem label={"TreeList"} openBranch>
-              <TreeItem label={"TreeItem"}></TreeItem>
+            <TreeItem label={<a href="#title-bar">TitleBar</a>}></TreeItem>
+            <TreeItem label={<a href="#tree-list-tree-item">TreeList</a>}>
+              <TreeItem
+                label={<a href="#tree-list-tree-item">TreeItem</a>}
+              ></TreeItem>
             </TreeItem>
-            <TreeItem label={"Typography"}></TreeItem>
+            <TreeItem label={<a href="#typography">Typography</a>}></TreeItem>
           </TreeItem>
         </TreeList>
       </aside>
@@ -51,7 +62,7 @@ function App() {
         <Typography type="h1" white>
           Windows 98 UI
         </Typography>
-        <div className="sectionContainer">
+        <div className="sectionContainer" id="introduction">
           <Typography type="h3" white>
             Introduction
           </Typography>
@@ -68,12 +79,12 @@ function App() {
             .
           </Typography>
         </div>
-        <div className="sectionContainer">
+        <div className="sectionContainer" id="components">
           <Typography type="h3" white>
             Components
           </Typography>
           <Typography type="h4" white>
-            Button
+            Button<span id="button"></span>
           </Typography>
           <Typography white>
             {`This is a regular <Button /> component, you can pass strings
@@ -165,7 +176,7 @@ function App() {
             </Button>`}</Typography>
             </div>
           </div>
-          <div className="sectionContainer">
+          <div className="sectionContainer" id="icons">
             <Typography white type="h4">
               Icons
             </Typography>
@@ -200,11 +211,11 @@ function App() {
               import them:
             </Typography>
             <div className="windowsBorders">
-              <TitleBar icon={ImgFolder} title="List of icons"></TitleBar>
+              <TitleBar icon={ImgFolderIcon} title="List of icons"></TitleBar>
               <IconGallery />
             </div>
           </div>
-          <div className="sectionContainer">
+          <div className="sectionContainer" id="inputs">
             <Typography white type="h4">
               Inputs
             </Typography>
@@ -342,7 +353,7 @@ function App() {
               <Input disabled placeholder="Disabled"></Input>
             </div>
           </div>
-          <div className="sectionContainer">
+          <div className="sectionContainer" id="modal">
             <Typography white type="h4">
               Modal
             </Typography>
@@ -424,7 +435,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="sectionContainer">
+          <div className="sectionContainer" id="tabs">
             <Typography white type="h4">
               Tabs
             </Typography>
@@ -524,6 +535,138 @@ function App() {
                 <Typography white>{`</Tabs>`}</Typography>
               </div>
             </div>
+          </div>
+          <div className="sectionContainer" id="title-bar">
+            <Typography white type="h4">
+              TitleBar
+            </Typography>
+            <Typography white>
+              This component can receive a function for each button, you can
+              achieve this passing it the next props: "onMinimize", "onMaximize"
+              and "onClose".
+            </Typography>
+            <Typography white>
+              It also receives the "icon" and "title" props.
+            </Typography>
+            <div className="componentsContainer">
+              <TitleBar icon={MineIcon} title="Minesweeper"></TitleBar>
+            </div>
+            <div className="windowsBorders">
+              <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+              <div className="codeContainer">
+                <Typography
+                  white
+                >{`import TitleBar from "./components/TitleBar/TitleBar";
+`}</Typography>
+                <Typography
+                  white
+                >{`import MineIcon from "./components/Icons/game_mine_1-1.png";
+`}</Typography>
+                <Typography
+                  white
+                >{`<TitleBar icon={MineIcon} title="Minesweeper"></TitleBar>`}</Typography>
+              </div>
+            </div>
+          </div>
+          <div className="sectionContainer" id="tree-list-tree-item">
+            <Typography white type="h4">
+              TreeList and TreeItem
+            </Typography>
+            <Typography white>TreeList</Typography>
+            <Typography white>
+              <strong>TreeList</strong> is used to contain one or more nested
+              TreeItems. You can pass an optional `fullHeight` prop to make it
+              take the full screen height (like the tree list on the left of
+              this page.)
+            </Typography>
+            <Typography white>
+              <strong>TreeItem</strong>s can be infinitely nested and must live
+              inside a <strong>TreeList</strong>.
+            </Typography>
+
+            <Typography white>
+              A <strong>TreeItem</strong> requires a `label` prop, which can be
+              a ReactNode, allowing you to put icons, emojis, text, etc.
+            </Typography>
+
+            <Typography white>
+              A <strong>TreeItem</strong> can be opened or closed, and you can
+              control this state using the `openBranch` prop.
+            </Typography>
+            <div className="componentsContainer">
+              <TreeList>
+                <TreeItem
+                  label={<IconWithText icon={ComputerIcon} text="CD Rom" />}
+                  openBranch
+                >
+                  <TreeItem
+                    label={<IconWithText icon={CDRomIcon} text="Computer" />}
+                    openBranch
+                  >
+                    <TreeItem
+                      label={<IconWithText icon={MouseIcon} text="Mouse" />}
+                      openBranch
+                    ></TreeItem>
+                  </TreeItem>
+                </TreeItem>
+                <TreeItem
+                  label={<IconWithText icon={KeyboardIcon} text="Keyboard" />}
+                  openBranch
+                ></TreeItem>
+                <TreeItem
+                  label={<IconWithText icon={MonitorIcon} text="Monitor" />}
+                  openBranch
+                ></TreeItem>
+              </TreeList>
+
+              <div className="windowsBorders">
+                <TitleBar icon={DosIcon} title="MS-DOS Prompt"></TitleBar>
+                <div className="codeContainer">
+                  <Typography type="pre" white>
+                    {`import TreeList from './components/TreeList/Treelist'
+import TreeItem from "./components/TreeList/Treelist";
+
+<TreeList>
+  <TreeItem label={<IconWithText icon={ComputerIcon} text="CD Rom" />} openBranch>
+    <TreeItem label={<IconWithText icon={CDRomIcon} text="Computer" />} openBranch>
+      <TreeItem label={<IconWithText icon={MouseIcon} text="Mouse" />} openBranch></TreeItem>
+    </TreeItem>
+  </TreeItem>
+  <TreeItem label={<IconWithText icon={KeyboardIcon} text="Keyboard" />} openBranch></TreeItem>
+  <TreeItem label={<IconWithText icon={MonitorIcon} text="Monitor" />} openBranch></TreeItem>
+</TreeList>
+`}
+                  </Typography>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sectionContainer" id="typography">
+            <Typography white type="h4">
+              Typography
+            </Typography>
+            <Typography white>
+              Typography is a component to give text styles. You can use the
+              `type` prop to specify the typography hierarchy.
+            </Typography>
+            <Typography white>
+              You can find all the available types below.
+            </Typography>
+            {["h1", "h2", "h3", "h4", "h5", "h6", "p", "pre"].map((tag) => (
+              <Typography type={tag as TypographyProps["type"]} white>
+                This is a {tag}
+              </Typography>
+            ))}
+
+            <Typography>
+              By default, Typography is color black and font-weight regular,
+            </Typography>
+            <Typography white>
+              You can add the `white` prop to make the text white.
+            </Typography>
+            <Typography white bold>
+              You can also add the `bold` prop to make the text bold.
+            </Typography>
           </div>
         </div>
       </div>

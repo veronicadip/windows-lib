@@ -6,14 +6,14 @@ interface Props {
   icon?: ReactNode;
   onClose?: () => void;
   onMinimize?: () => void;
-  onExpand?: () => void;
+  onMaximize?: () => void;
 }
 
 const TitleBar: FunctionComponent<Props> = ({
   title,
   icon,
   onClose,
-  onExpand,
+  onMaximize,
   onMinimize,
 }) => {
   return (
@@ -31,8 +31,8 @@ const TitleBar: FunctionComponent<Props> = ({
           onClick={onMinimize ? () => onMinimize() : undefined}
         ></button>
         <button
-          className="barButtons expand"
-          onClick={onExpand ? () => onExpand() : undefined}
+          className="barButtons maximize"
+          onClick={onMaximize ? () => onMaximize() : undefined}
         ></button>
         <button
           className="barButtons close"

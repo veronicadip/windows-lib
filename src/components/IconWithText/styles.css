@@ -1,0 +1,9 @@
+.windowsIconWithText {
+  display: flex;
+  align-items: center;
+}
+
+.windowsIconWithText img {
+  margin-right: 7px;
+  max-width: 25px;
+}

@@ -38,7 +38,7 @@
   background-position: top 5px left 7px;
   background-image: url("../../assets/exit.svg");
 }
-.expand {
+.maximize {
   background-size: 16px;
   background-position: top 4px left 6px;
   background-image: url("../../assets/expand.svg");

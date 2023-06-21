@@ -1,9 +1,9 @@
 import { FunctionComponent, PropsWithChildren, CSSProperties } from "react";
 import "./styles.css";
 
-interface Props extends PropsWithChildren {
+export interface Props extends PropsWithChildren {
   bold?: boolean;
-  type?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  type?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "pre";
   white?: boolean;
 }
 
@@ -23,6 +23,17 @@ const Typography: FunctionComponent<Props> = ({
       >
         {children}
       </p>
+    );
+  }
+  if (type === "pre") {
+    return (
+      <pre
+        className={`windowsPre ${!bold ? "" : "preBold"} ${
+          !white ? "" : "whiteFont"
+        }`}
+      >
+        {children}
+      </pre>
     );
   }
   if (type === "h1") {

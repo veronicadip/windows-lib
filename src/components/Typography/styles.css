@@ -62,3 +62,11 @@
 .whiteFont {
   color: #fff;
 }
+
+.windowsPre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  line-height: 25px;
+  font-size: 1.2rem;
+}
