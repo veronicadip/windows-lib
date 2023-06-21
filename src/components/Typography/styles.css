@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "MS Sans Serif";
+  src: url("../../fonts/W95FA.otf") format("opentype");
+}
+@font-face {
+  font-family: "MS Sans Serif Bold";
+  src: url(../../fonts/MS\ Sans\ Serif\ Bold.ttf) format("truetype");
+}
+body {
+  font-size: 1.2rem;
+  font-family: "MS Sans Serif", sans-serif;
+}
+a {
+  color: #222222;
+}
+p {
+  margin: 0 0 1rem 0;
+}
 /* HEADINGS */
 /* H1 */
 .windowsH1 {
