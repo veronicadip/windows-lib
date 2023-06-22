@@ -10,4 +10,6 @@ Windows 98 UI is a React library that contains ready-to-use components (they com
 
 Windows 98 UI is available as an npm package.
 
-`npm i windows98-lib`
+```
+npm i windows98-lib
+```
