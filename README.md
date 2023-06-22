@@ -12,13 +12,12 @@ Go to the directory where you want to install this library:
 
 ```
 cd your-directory
+```
 
 Install it using npm:
 
 ```
-
 npm i windows98-lib
-
 ```
 
 ## How to use it
@@ -31,12 +30,12 @@ Once you installed it, you will have the next components:
 - Inputs
 - Modal
 - Tabs
-    - TabList
-    - Tab
-    - TabPanel
+  - TabList
+  - Tab
+  - TabPanel
 - TitleBar
 - TreeList
-    - TreeItem
+  - TreeItem
 - Typography
 
 You'll need to import them, and then you are ready to use them!
@@ -52,7 +51,6 @@ Here are some examples:
 ![plot](./src/assets/screenshots/Screen%20Shot%202023-06-21%20at%2010.27.28%20PM.png)
 
 You can see how all of them look and function in the [Windows98 UI Docs](https://windows98-ui.netlify.app/).
-```
 
 ## License
 
